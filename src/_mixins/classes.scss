@@ -1,16 +1,60 @@
 // generate border classes
-@mixin make-base-classes( $prefix) {
-    $classPrefix: '.#{$class-prefix}#{$prefix}';
+@mixin make-base-classes($prefix) {
+    $classPrefix: ".#{$class-prefix}#{$prefix}";
     /* Float */
-    @include value-list-classes(float, ('left': left, 'right': right, 'none': none, 'unset': unset), $classPrefix);
+    @include value-list-classes(
+        float,
+        (
+            "left": left,
+            "right": right,
+            "none": none,
+            "unset": unset
+        ),
+        $classPrefix
+    );
     /* Text align */
-    @include value-list-classes(text-align, ('center': center, 'txtleft': left, 'txtcenter': center, 'txtright': right), $classPrefix);
+    @include value-list-classes(
+        text-align,
+        (
+            "center": center,
+            "txtleft": left,
+            "txtcenter": center,
+            "txtright": right
+        ),
+        $classPrefix
+    );
     /* Display */
-    @include value-list-classes(display, ('block': block, 'inline': inline, 'inline_block': inline-block, 'flex': flex, 'none': none), '.#{$class-prefix}display_#{$prefix}');
+    @include value-list-classes(
+        display,
+        (
+            "block": block,
+            "inline": inline,
+            "inline_block": inline-block,
+            "flex": flex,
+            "none": none
+        ),
+        ".#{$class-prefix}display_#{$prefix}"
+    );
     /* Cursor */
-    @include value-list-classes(cursor, ('pointer': pointer, 'default': default), '.#{$class-prefix}cursor_#{$prefix}');
+    @include value-list-classes(
+        cursor,
+        (
+            "pointer": pointer,
+            "default": default
+        ),
+        ".#{$class-prefix}cursor_#{$prefix}"
+    );
     /* Justify content */
-    @include value-list-classes(justify-content, ('between': space-between, 'around': space-around, 'center': center, 'flex_end': flex-end), '.#{$class-prefix}justify_content_#{$prefix}');
+    @include value-list-classes(
+        justify-content,
+        (
+            "between": space-between,
+            "around": space-around,
+            "center": center,
+            "flex_end": flex-end
+        ),
+        ".#{$class-prefix}justify_content_#{$prefix}"
+    );
     /* Misc */
     .#{$class-prefix} {
         &#{$prefix} {
@@ -161,7 +205,7 @@
         }
     }
     /* Padding */
-    @include create-spacing-list('#{$prefix}p', '', 4, 0.5, padding);
+    @include create-spacing-list("#{$prefix}p", "", 4, 0.5, padding);
     /* Margin */
-    @include create-spacing-list('#{$prefix}m', '', 4, 0.5, margin);
+    @include create-spacing-list("#{$prefix}m", "", 4, 0.5, margin);
 }

@@ -42,7 +42,7 @@
         width: 24px;
         height: 24px;
         position: absolute;
-        content: '\2716';
+        content: "\2716";
         display: inline-block;
         font-size: 20.66667px;
         text-align: center;
@@ -53,7 +53,7 @@
         width: 24px;
         height: 25px;
         position: absolute;
-        content: '\2022';
+        content: "\2022";
         display: inline-block;
         font-size: 50.66667px;
         text-align: center;
@@ -63,7 +63,7 @@
     input[type="checkbox" i]:checked::after,
     input[type="radio" i]:checked::after {
         background: #b0b3bd;
-        content: '';
+        content: "";
         display: block;
         position: relative;
         z-index: 100;

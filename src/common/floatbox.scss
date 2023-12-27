@@ -79,7 +79,7 @@
             @include browser-compatible(border-radius, var(--radius));
             @include browser-compatible(box-shadow, var(--shadow));
             overflow: hidden;
-            &>.#{$class-prefix}bg_color {
+            & > .#{$class-prefix}bg_color {
                 background: var(--color--app);
                 padding: var(--padd) var(--padd);
             }
@@ -163,7 +163,6 @@ body {
     }
 }
 
-
 /* Floatbox preloader style */
 
 .#{$class-prefix}floatbox_preloader {
@@ -186,7 +185,7 @@ body {
     &::before,
     &::after {
         position: absolute;
-        content: '';
+        content: "";
         border-radius: 50%;
     }
     &::before {
@@ -211,8 +210,6 @@ body {
     }
 }
 
-
 /* End Floatbox preloader style */
-
 
 /* End FloatBox implementation */

@@ -97,7 +97,7 @@ html body .#{$class-prefix}box_cap_empty .#{$class-prefix}box_cap_body h3 {
     display: none;
 }
 
-.#{$class-prefix}video_wrapper{
+.#{$class-prefix}video_wrapper {
     display: flex;
     // justify-content: space-between;
     margin-left: 50px;
@@ -105,15 +105,15 @@ html body .#{$class-prefix}box_cap_empty .#{$class-prefix}box_cap_body h3 {
     flex-wrap: wrap;
     margin-bottom: 20px;
     box-sizing: border-box;
-    .#{$class-prefix}single_video{
+    .#{$class-prefix}single_video {
         background-color: #fff;
         border-radius: 5px;
-        h2{
+        h2 {
             font-size: 1rem;
             padding: 10px 17px;
             margin: 0;
         }
-        #videos{
+        #videos {
             display: flex;
             justify-content: center;
         }
@@ -123,9 +123,8 @@ html body .#{$class-prefix}box_cap_empty .#{$class-prefix}box_cap_body h3 {
             font-size: 0.75rem;
             .#{$class-prefix}video_stat {
                 padding: 10px 0;
-                
             }
-            .#{$class-prefix}video_stat_border{
+            .#{$class-prefix}video_stat_border {
                 border-bottom: 1px solid #2222;
             }
         }

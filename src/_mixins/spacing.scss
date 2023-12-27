@@ -1,15 +1,14 @@
 // Create spacing list
-@mixin create-spacing-list( $name, $prefix, $size, $spacing, $spacingType: padding) {
+@mixin create-spacing-list($name, $prefix, $size, $spacing, $spacingType: padding) {
     @for $i from 1 through $size {
         .#{$class-prefix}#{$name}#{$prefix}#{$i} {
             padding: #{$spacing}rem !important;
         }
-        @each $type,
-        $property in ('t':top, 'r':right, 'b':bottom, 'l':left) {
+        @each $type, $property in ("t": top, "r": right, "b": bottom, "l": left) {
             .#{$class-prefix}#{$name}#{$type}#{$prefix}#{$i} {
                 #{$spacingType}-#{$property}: #{$spacing}rem !important;
             }
         }
-        $spacing: $spacing+0.5;
+        $spacing: $spacing + 0.5;
     }
 }

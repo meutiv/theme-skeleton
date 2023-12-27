@@ -1,10 +1,10 @@
-@import '../vendor/bootstrap/mixins/grid';
-@mixin make-base-grids( $prefix) {
+@import "../vendor/bootstrap/mixins/grid";
+@mixin make-base-grids($prefix) {
     /* Grid */
     .#{$class-prefix}#{$prefix} {
         &row {
             @include make-row();
-            >* {
+            > * {
                 @include make-col-ready();
                 @include browser-compatible(box-sizing, border-box);
             }
@@ -55,8 +55,8 @@
 }
 
 @mixin create_gutter() {
-    padding-right: calc(var(--gutter-x) * .5);
-    padding-left: calc(var(--gutter-x) * .5);
+    padding-right: calc(var(--gutter-x) * 0.5);
+    padding-left: calc(var(--gutter-x) * 0.5);
     margin-top: var(--gutter-y);
     @include browser-compatible(box-sizing, border-box);
 }

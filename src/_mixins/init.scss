@@ -1,8 +1,7 @@
-@mixin value-list-classes( $property, $classList, $prefix: '.#{$class-prefix}') {
+@mixin value-list-classes($property, $classList, $prefix: ".#{$class-prefix}") {
     @if $classList {
         #{$prefix} {
-            @each $class,
-            $value in $classList {
+            @each $class, $value in $classList {
                 &#{$class} {
                     #{$property}: #{$value};
                 }
@@ -16,12 +15,12 @@
     padding-right: var(--padd--canvas);
 }
 
-@import 'ic.scss';
-@import 'colors.scss';
-@import 'browser.scss';
-@import 'spacing.scss';
-@import 'columns.scss';
-@import 'list.scss';
-@import 'classes.scss';
-@import 'elements.scss';
-@import 'menu_icon.scss';
+@import "ic.scss";
+@import "colors.scss";
+@import "browser.scss";
+@import "spacing.scss";
+@import "columns.scss";
+@import "list.scss";
+@import "classes.scss";
+@import "elements.scss";
+@import "menu_icon.scss";

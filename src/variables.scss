@@ -1,12 +1,12 @@
-$class-prefix: 'mt_' !default;
-$image-path: '../images/' !default;
-$font-path: '../webfonts/' !default;
-$internal-path: 'src' !default;
-$external-path: 'css' !default;
+$class-prefix: "mt_" !default;
+$image-path: "../images/" !default;
+$font-path: "../webfonts/" !default;
+$internal-path: "src" !default;
+$external-path: "css" !default;
 
-$PATH_COMMON: 'common';
-$PATH_PLUGIN: 'plugins';
-$PATH_SERVICE: 'service';
+$PATH_COMMON: "common";
+$PATH_PLUGIN: "plugins";
+$PATH_SERVICE: "service";
 
 @import "vendor/bootstrap/functions";
 
@@ -41,9 +41,25 @@ $photo-height: 179px;
 $photo-height-lg: 272px;
 // $input-line-height: 40px;
 
-$internal-components: ('common', 'content', 'forms', 'layouts', 'listing', 'menus', 'plugins', 'thumbnail'); // scss-docs-start grid-breakpoints
-$max-breakpoints: ( xxl: 1400px, xl: 1200px, lg: 992px, md: 768px, sm: 576px, xs: 0) !default;
-$chat-message-font-size: calc((var(--font-size) * 14)/ 19);
+$internal-components: (
+    "common",
+    "content",
+    "forms",
+    "layouts",
+    "listing",
+    "menus",
+    "plugins",
+    "thumbnail"
+); // scss-docs-start grid-breakpoints
+$max-breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+    xs: 0
+) !default;
+$chat-message-font-size: calc((var(--font-size) * 14) / 19);
 $menu-icon-size: percent_value($font-size, 160);
 $menu-text-size: percent_value($font-size, 80);
 $feed-icon-size: percent_value($font-size, 160);
@@ -56,4 +72,4 @@ $sidebar-width: 330px;
 @import "vendor/bootstrap/mixins";
 @import "vendor/bootstrap/utilities";
 @import "_mixins/init.scss";
-@import 'theme.scss';
+@import "theme.scss";

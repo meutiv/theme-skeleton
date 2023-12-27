@@ -1,22 +1,29 @@
 //gradient color
-$site-color-gradient: linear-gradient(94.33deg, var(--gradient-first-color) -3.3%, var(--gradient-second-color) -3.29%, var(--gradient-third-color) 33.07%, var(--gradient-first-color) 63.12%, var(--gradient-fourth-color) 97.91%);
+$site-color-gradient: linear-gradient(
+    94.33deg,
+    var(--gradient-first-color) -3.3%,
+    var(--gradient-second-color) -3.29%,
+    var(--gradient-third-color) 33.07%,
+    var(--gradient-first-color) 63.12%,
+    var(--gradient-fourth-color) 97.91%
+);
 $color-primary-color: #2979ff;
 $colro-primary-shade: #bbdefb;
-$color-primary-light:#64b5f6;
-$color-primary-ultralight:#e3f2fd;
-$color-primary-dark:#2962ff;
-$color-primary-alpha:rgba(21, 131, 233, 0.15);
-$color-primary-alpha-hard:rgba(21, 131, 233, 0.5);
-$color-secondary:#2962ff;
+$color-primary-light: #64b5f6;
+$color-primary-ultralight: #e3f2fd;
+$color-primary-dark: #2962ff;
+$color-primary-alpha: rgba(21, 131, 233, 0.15);
+$color-primary-alpha-hard: rgba(21, 131, 233, 0.5);
+$color-secondary: #2962ff;
 $color-app: #fff;
 $color-text-light: #666666;
 $color-text-lighter: #949494;
 $color-text-black: #000;
-$color-text-dark: #413A38;
-$color-bg: #E2E8EC;
+$color-text-dark: #413a38;
+$color-bg: #e2e8ec;
 $color-bg-light: #f7f7f7;
-$color-bg-alt: #FAFAFA;
-$color-border: #ECECEC;
+$color-bg-alt: #fafafa;
+$color-border: #ececec;
 $color-action-bg: #fef0ee;
 $color-success: #66bb6a;
 $color-success--light: #c8e6c9;
