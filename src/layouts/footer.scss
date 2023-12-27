@@ -1,0 +1,131 @@
+/* Footer */
+
+@mixin brand-image( $name, $image, $color) {
+    &.#{$name} {
+        background-image: url(#{$image});
+        background-color: #{$color};
+    }
+}
+
+.#{$class-prefix}footer {
+    background: var(--webcilo-footer-bg-color);
+    color: var(--webcilo-footer-color);
+    padding: 2em 0;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    font-size: 85%;
+    line-height: 100%;
+    .#{$class-prefix}canvas {
+        width: 100%;
+    }
+    ul {
+        &:not(.#{$class-prefix}webcilo_footer_social) {
+            li {
+                list-style-type: none;
+                position: relative;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: var(--webcilo-footer-link-color);
+                    padding: 10px 5px;
+                    border-bottom: 1px solid var(--webcilo-footer-link-color);
+                    text-transform: capitalize;
+                    &:hover {
+                        color: #fff;
+                    }
+                    &::after {
+                        content: ">";
+                        display: block;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    .#{$class-prefix}webcilo_footer_ca_btn {
+        background: var(--webcilo-footer-bg-color);
+        border: solid 2px var(--webcilo-footer-link-color);
+        padding: 5px;
+        border-radius: 20px;
+        margin: 10px 0;
+        width: 100%;
+        color: var(--webcilo-footer-link-color);
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .#{$class-prefix}copyright {
+        float: left;
+        padding-left: 10px;
+    }
+}
+
+
+/* Footer content style */
+
+.#{$class-prefix}webcilo_footer_column_title {
+    color: var(--webcilo-footer-heading-color);
+    border-bottom: 2px solid var(--webcilo-footer-heading-border);
+    margin-bottom: 15px;
+    padding: 0px 0px 10px;
+}
+
+.#{$class-prefix}webcilo_footer_logo {
+    width: 100px;
+    padding-bottom: 1em;
+}
+
+.#{$class-prefix}webcilo_footer_intro_text {
+    margin-bottom: .5em;
+}
+
+.#{$class-prefix}webcilo_footer_intro_text,
+.#{$class-prefix}webcilo_footer_copyright {
+    font-weight: bold;
+    text-align: left;
+}
+
+.#{$class-prefix}webcilo_footer_copyright {
+    padding: 30px 0px 0px;
+    border-top: solid 1px var(--divider);
+    margin-top: 30px;
+    font-size: 100%;
+}
+
+ul {
+    &.#{$class-prefix}social_links {
+        display: block;
+        text-align: center;
+        li {
+            display: inline-block;
+            margin: 4px;
+            a {
+                display: block;
+                padding: 5px;
+                color: #333;
+                font-size: 0px;
+                height: 32px;
+                width: 32px;
+                background: no-repeat center center var(--webcilo-footer-bg-color);
+                background-size: 16px 16px;
+                border-radius: 100%;
+                text-decoration: none;
+                @include brand-image('facebook', '#{$image-path}facebook-f.svg', #3C5A98);
+                @include brand-image('twitter', '#{$image-path}twitter.svg', #38A8DF);
+                @include brand-image('youtube', '#{$image-path}youtube.svg', #FF0000);
+                @include brand-image('pinterest', '#{$image-path}pinterest.svg', #E60023);
+                @include brand-image('reddit', '#{$image-path}reddit.svg', #FF5700);
+                @include brand-image('skype', '#{$image-path}skype.svg', #00aff0);
+                @include brand-image('snapchat', '#{$image-path}snapchat.svg', #FFFC00);
+                @include brand-image('telegram', '#{$image-path}telegram.svg', #0088cc);
+                @include brand-image('whatsapp', '#{$image-path}whatsapp.svg', #075e54);
+                @include brand-image('vimeo', '#{$image-path}vimeo.svg', #86c9ef);
+                @include brand-image('trello', '#{$image-path}trello.svg', #1675B9);
+                @include brand-image('tumblr', '#{$image-path}tumblr.svg', #34526f);
+                @include brand-image('instagram', '#{$image-path}instagram.svg', #3f729b);
+            }
+        }
+    }
+}

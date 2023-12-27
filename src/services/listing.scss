@@ -1,0 +1,29 @@
+@import '../listing/regular.scss';
+@import '../listing/ipc.scss';
+@import '../listing/mini_ipc.scss';
+@import '../listing/ic.scss';
+@import '../listing/avatar.scss';
+@import '../listing/picture.scss';
+@import '../listing/ulist.scss';
+@import '../listing/ulist_big.scss';
+@import '../listing/card.scss';
+@import '../listing/feed.scss';
+@import '../listing/tags.scss';
+@import '../listing/widget.scss';
+
+/* Profile view list */
+
+.#{$class-prefix}webcilo_profile_view_qf {
+    border-bottom: solid 1px var(--divider);
+    padding: 10px 15px;
+    font-size: 78%;
+}
+
+.#{$class-prefix}webcilo_profile_view_qf .#{$class-prefix}label {
+    text-transform: uppercase;
+    color: var(--color--text--light);
+}
+
+.#{$class-prefix}webcilo_profile_view_qf .#{$class-prefix}value {
+    color: var(--color--text);
+}

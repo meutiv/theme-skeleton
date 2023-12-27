@@ -1,0 +1,74 @@
+/* ---- Index Page styles ---- */
+
+.index_master_page .#{$class-prefix}page {
+    margin-right: 0px;
+}
+
+.index_master_page.#{$class-prefix}page_wrap {
+    padding-top: 0;
+}
+
+.index_master_page .#{$class-prefix}site_panel {
+    background: transparent;
+    position: fixed;
+    top: 0;
+}
+
+
+/* Header */
+
+.index_master_page .#{$class-prefix}header_wrap {
+    padding-top: 70px;
+    background-image: url(#{$image-path}bg_promo.jpg);
+    /** OW_Control type:image, section:1. General Settings, key:indexImage, label:2. Page background image **/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0px;
+}
+
+.index_master_page .#{$class-prefix}header {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.index_master_page .#{$class-prefix}header_pic {
+    display: block;
+    height: auto;
+    background: none;
+}
+
+.index_master_page .logo_url {
+    display: block;
+    height: 48px;
+    background-image: url(#{$image-path}logo.png);
+    /** OW_Control type:image, key:logoImage, section:1. General Settings, label: 4. Logo image **/
+    background-repeat: no-repeat;
+    background-position: center 0px;
+}
+
+
+/* Index Join button */
+
+.index_join_wrap {
+    padding: 40px 0px 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.index_join_btn {
+    display: inline-block;
+    width: 301px;
+    height: 90px;
+    background: url(#{$image-path}index_join_btn.png) no-repeat 0 -90px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+}
+
+.index_join_btn:hover {
+    background-position: 0 16px;
+}
+
+
+/* ---- End of the Index Page styles ---- */

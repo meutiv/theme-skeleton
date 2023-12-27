@@ -1,0 +1,163 @@
+/* ---- Info tooltip styles ---- */
+
+.#{$class-prefix}tip {
+    display: inline-block;
+    position: absolute;
+    z-index: var(--order--tip);
+}
+
+.#{$class-prefix}tip_box {
+    position: relative;
+    padding: 2px 9px 4px;
+    background-color: #fff;
+    color: #828894;
+    border: 1px solid #ccd6de;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+}
+
+.#{$class-prefix}tip_arrow {
+    display: none;
+    position: absolute;
+}
+
+.#{$class-prefix}tip_arrow span {
+    display: block;
+    border: 5px dashed transparent;
+}
+
+
+/* Tip top */
+
+.#{$class-prefix}tip_top .#{$class-prefix}tip_box {
+    margin-bottom: 5px;
+}
+
+.#{$class-prefix}tip_top .#{$class-prefix}tip_box:after,
+.#{$class-prefix}tip_top .#{$class-prefix}tip_box:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.#{$class-prefix}tip_top .#{$class-prefix}tip_box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 5px;
+    margin-left: -5px;
+}
+
+.#{$class-prefix}tip_top .#{$class-prefix}tip_box:before {
+    border-color: rgba(204, 214, 222, 0);
+    border-top-color: #ccd6de;
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+
+/* Tip right */
+
+.#{$class-prefix}tip_right .#{$class-prefix}tip_box:after,
+.#{$class-prefix}tip_right .#{$class-prefix}tip_box:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.#{$class-prefix}tip_right .#{$class-prefix}tip_box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 5px;
+    margin-top: -5px;
+}
+
+.#{$class-prefix}tip_right .#{$class-prefix}tip_box:before {
+    border-color: rgba(204, 214, 222, 0);
+    border-right-color: #ccd6de;
+    border-width: 6px;
+    margin-top: -6px;
+}
+
+.#{$class-prefix}tip_right .#{$class-prefix}tip_box {
+    margin-left: 5px;
+}
+
+
+/* Tip left */
+
+.#{$class-prefix}tip_left .#{$class-prefix}tip_box:after,
+.#{$class-prefix}tip_left .#{$class-prefix}tip_box:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.#{$class-prefix}tip_left .#{$class-prefix}tip_box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #fff;
+    border-width: 5px;
+    margin-top: -5px;
+}
+
+.#{$class-prefix}tip_left .#{$class-prefix}tip_box:before {
+    border-color: rgba(204, 214, 222, 0);
+    border-left-color: #ccd6de;
+    border-width: 6px;
+    margin-top: -6px;
+}
+
+.#{$class-prefix}tip_left .#{$class-prefix}tip_box {
+    margin-right: 5px;
+}
+
+
+/* Tip bottom */
+
+.#{$class-prefix}tip_bot .#{$class-prefix}tip_box:after,
+.#{$class-prefix}tip_bot .#{$class-prefix}tip_box:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.#{$class-prefix}tip_bot .#{$class-prefix}tip_box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 5px;
+    margin-left: -5px;
+}
+
+.#{$class-prefix}tip_bot .#{$class-prefix}tip_box:before {
+    border-color: rgba(204, 214, 222, 0);
+    border-bottom-color: #ccd6de;
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+.#{$class-prefix}tip_bot .#{$class-prefix}tip_box {
+    margin-top: 5px;
+}
+
+
+/* ---- End of the Info tooltip styles ---- */

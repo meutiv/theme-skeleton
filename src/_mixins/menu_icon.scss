@@ -1,0 +1,13 @@
+@mixin add-menu-icon($className, $iconName) {
+    &#{$className} a span {
+        @include icon-content($iconName);
+    }
+}
+
+@mixin add-console-icon($className, $iconName) {
+    &#{$className} {
+        a.#{$class-prefix}console_item_link {
+            @include icon-content($iconName);
+        }
+    }
+}

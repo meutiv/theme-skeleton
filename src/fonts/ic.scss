@@ -1,0 +1,140 @@
+html body div *[class^="ow_ic_"] {
+    background-image: none;
+}
+
+html {
+    body {
+        div *[class^="ow_ic_"]:before,
+        span[class*="ow_ic_"]:before {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .#{$class-prefix}box_cap_body h3[class*="ow_ic_"]:before,
+        .#{$class-prefix}page>h1.#{$class-prefix}stdmargin[class*="ow_ic_"]:before {
+            display: none !important;
+        }
+        div {
+            *[class^="ow_ic_"] {
+                background-image: none;
+            }
+            @each $ic,
+            $content in $ic-list {
+                .#{$class-prefix}ic_#{$ic} {
+                    @include icon-content($ic);
+                }
+            }
+            @each $fa-ic,
+            $fa-content in $fa-ic-list {
+                .#{$class-prefix}fa_#{$fa-ic} {
+                    &::before {
+                        content: "#{$fa-content}";
+                    }
+                }
+            }
+            .#{$class-prefix}miniic_comment {
+                background: url(#{$image-path}miniic_set.svg) no-repeat -38px 0px;
+            }
+            .#{$class-prefix}miniic_like {
+                background: url(#{$image-path}miniic_set.svg) no-repeat 0px 0px;
+            }
+            .#{$class-prefix}miniic_delete {
+                background-image: url(#{$image-path}miniic_x.png);
+            }
+            .#{$class-prefix}tinyic_delete {
+                background-image: url(#{$image-path}tinyic_delete.png);
+            }
+            .#{$class-prefix}tinyic_tag {
+                background-image: url(#{$image-path}tinyic_tag.png);
+            }
+            .#{$class-prefix}tinyic_write {
+                background-image: url(#{$image-path}tinyic_write.png);
+            }
+        }
+    }
+}
+
+
+/*---- Icons on hover for buttons styles ----*/
+
+html {
+    body.ow div input.#{$class-prefix}inprogress,
+    body div .#{$class-prefix}button:hover .#{$class-prefix}inprogress {
+        background-image: url(#{$image-path}ajax_preloader_button.svg);
+        background-position: right -4px center;
+    }
+    body {
+        &.ow {
+            div {
+                .#{$class-prefix}inprogress {
+                    background-image: url(#{$image-path}ajax_preloader_button.gif);
+                    background-repeat: no-repeat;
+                    background-position: right -4px center;
+                    padding-right: 25px;
+                }
+            }
+        }
+        div {
+            .#{$class-prefix}button span,
+            .#{$class-prefix}button span.#{$class-prefix}negative,
+            .#{$class-prefix}button:hover span.#{$class-prefix}negative,
+            .#{$class-prefix}button:hover span.#{$class-prefix}negative input,
+            .#{$class-prefix}button span.#{$class-prefix}negative .#{$class-prefix}inprogress {
+                background-image: none;
+                background-repeat: no-repeat;
+            }
+            span.#{$class-prefix}button:hover span {
+                background-image: none !important;
+            }
+        }
+    }
+    .#{$class-prefix}no_cap span.#{$class-prefix}ic_up_arrow {
+        width: 20px;
+        display: inline-block;
+    }
+}
+
+
+/*---- End of the Icons on hover for buttons styles ----*/
+
+.maintenance_cont h1 {
+    background-image: none;
+}
+
+.#{$class-prefix}icon_control {
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 0px 0 3px 20px;
+    line-height: 15px;
+}
+
+.#{$class-prefix}miniicon_control {
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 1px 0 2px 14px;
+    line-height: 9px;
+}
+
+.#{$class-prefix}box_cap_icons {
+    margin-top: -26px;
+    a.close {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        float: right;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(216, 216, 216, 0.31);
+        background-image: url(#{$image-path}ic_img/ic_delete.svg) !important;
+        padding: 5px;
+        border-radius: 10%;
+        color: rgba(255, 255, 255, 0);
+        opacity: .5;
+    }
+}
+
+span.#{$class-prefix}icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: top;
+}

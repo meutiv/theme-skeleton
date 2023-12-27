@@ -1,0 +1,31 @@
+.#{$class-prefix}vote {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padd--sm);
+    border: solid 1px var(--divider--light);
+    @include browser-compatible(border-radius, var(--border-radius--xl));
+    // @include browser-compatible(box-shadow, var(--box-shadow--hard));
+    .#{$class-prefix}btn_vote {
+        display: inline-block;
+        padding: var(--padd--sm);
+        &::before {
+            @include icofont();
+        }
+        &.#{$class-prefix}vote_up {
+            &::before {
+                content: "\f00c";
+            }
+        }
+        &.#{$class-prefix}vote_down {
+            &::before {
+                content: "\f00b";
+            }
+        }
+    }
+    .#{$class-prefix}vote_count {
+        display: inline-block;
+        color: var(--color--text);
+    }
+}

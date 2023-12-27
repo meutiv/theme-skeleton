@@ -1,0 +1,18 @@
+/* ---- Fw menu styles ---- */
+
+.#{$class-prefix}fw_menu {
+    padding: 4px 8px 4px 0px;
+    min-height: 24px;
+    clear: both;
+}
+
+.#{$class-prefix}fw_btns {
+    display: inline-block;
+}
+
+.#{$class-prefix}fw_menu .#{$class-prefix}explore_photos_show {
+    font-size: 14px;
+}
+
+
+/* ---- End of the Fw menu styles ---- */

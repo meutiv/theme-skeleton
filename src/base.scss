@@ -1,0 +1,143 @@
+@import 'variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html,
+body {
+    --font-size: 1.09rem;
+    --line-height: 1.4rem;
+    --container: 1560px;
+}
+
+:root {
+    // Color configs
+    --color--primary: #{set-config($color-primary-color, 'color', $sectionColor, 'primaryColor', 'Primary color')};
+    --color--secondary: #{set-config($color-secondary, 'color', $sectionColor, 'secondaryColor', 'Secondary color')};
+    --header-bg-color: #{set-config($color-app, 'color', $sectionColor, 'headerBgColor', 'Header Background Color')};
+    --header-color: #{set-config($color-app, 'color', $sectionColor, 'headingColor', 'Heading Color')};
+    --color--text: #{set-config('#494954', 'color', $sectionColor, 'textColor', 'Text Color')};
+    --color--link: #{set-config('#494954', 'color', $sectionColor, 'linkColor', 'Links Color')};
+    // main bg color
+    --site-bg-color: #{set-config($color-bg, 'color', $sectionColor, 'bodyBg', 'Page background color')};
+    // alt bg color
+    --site-alt-bg-color: #{set-config('#fafafa', 'color', $sectionColor, 'bodyBg', 'Page Alt background color')};
+    // site text color
+    --site-color: #{set-config('#494954', 'color', $sectionColor, 'bodyColor', 'Site color')};
+    // main menu link color
+    --menu-color: #{set-config('#91919d', 'color', $sectionColor, 'menuColor', 'Main Menu Color')};
+    // main menu bg color
+    --menu-bg: #{set-config('#fff', 'color', $sectionColor, 'menuBg', 'Main Menu Background Color')};
+    // main menu active bg color
+    --menu-active-bg-color: #{set-config('#fff2f3', 'color', $sectionColor, 'activeMenuBgColor', 'Active Menu Background Color')};
+    // main menu active link color
+    --menu-active-color: #{set-config('#ea535c', 'color', $sectionColor, 'activeMenuColor', 'Active Menu Color')};
+    // Other colors
+    --bg-gradient-nope: linear-gradient(to right, rgb(235, 8, 140), rgb(255, 101, 1));
+    --bg-gradient-like: linear-gradient(to right, rgb(19, 168, 158), rgb(171, 242, 242));
+    --bg-gradient-superlike: linear-gradient(to right, rgb(0, 155, 216), rgb(75, 197, 230));
+    --bg-gradient-app: linear-gradient(270deg, #f7395f 0%, #fe702e 100%);
+    --divider: rgba(70, 77, 87, 0.15);
+    --divider--light: rgba(70, 77, 87, 0.1);
+    --divider--lighten: rgba(70, 77, 87, 0.05);
+    --divider--dark: rgba(70, 77, 87, 0.25);
+    --divider--r: rgba(255, 255, 255, 0.1);
+    --divider--r--light: rgba(255, 255, 255, 0.05);
+    --color--success: #66bb6a;
+    --color--success--light: #c8e6c9;
+    --color--success--ultralight: #e8f5e9;
+    --color--success--dark: #4caf50;
+    --color--warning: #ffa726;
+    --color--warning--light: #ffe0b2;
+    --color--warning--ultralight: #fff3e0;
+    --color--warning--dark: #f57c00;
+    --color--abort: #e53935;
+    --color--abort--light: #ffcdd2;
+    --color--abort--ultralight: #ffebee;
+    --color--abort--dark: #d32f2f;
+    --color--alt: #f27e3f;
+    --color--online: #45d927;
+    --color--app: #fff;
+    --color--app--lightgray: #fbfbfb;
+    --color--app--gray: #f7f7f7;
+    --color--app--darkgray: #eee;
+    --color--app--dark: #46494f;
+    --color--app--darker: #202124;
+    --color--heading: #333;
+    --color--text: #494954;
+    --color--text--light: #91919d;
+    --color--text--lighten: #b0b0b9;
+    --color--text--invert: #fff;
+}
+
+:root {
+    // Social links
+    --facebook: #{set-config('#', 'text', $sectionSocial, 'facebook', 'Facebook page url')};
+    --twitter: #{set-config('#', 'text', $sectionSocial, 'twitter', 'Twitter profile url')};
+    --pinterest: #{set-config('#', 'text', $sectionSocial, 'pinterest', 'Pinterest profile url')};
+    --instagram: #{set-config('#', 'text', $sectionSocial, 'instagram', 'Instagram profile url')};
+    --tiktok: #{set-config('#', 'text', $sectionSocial, 'tiktok', 'Tiktok profile url')};
+    --youtube-channel: #{set-config('#', 'text', $sectionSocial, 'ytChannel', 'YouTube Channel')};
+    --youtube-video-id: #{set-config('#', 'text', $sectionSocial, 'ytVideoId', 'YouTube Video ID')};
+    --skype: #{set-config('#', 'text', $sectionSocial, 'skype', 'Skype profile url')};
+    --linkedin: #{set-config('#', 'text', $sectionSocial, 'linkedin', 'LinkedIn profile url')};
+}
+
+:root {
+    --primary-font: "Poppins", sans-serif;
+    --header-height: #{$header-height};
+    --padd: 10px;
+    --padd--xs: calc(var(--padd) / 4);
+    --padd--sm: calc(var(--padd) / 2);
+    --padd--md: calc(var(--padd) * 2);
+    --padd--xl: calc(var(--padd) * 3);
+    --padd--canvas: var(--padd--xl);
+    --gutter-x: var(--padd);
+    --gutter-y: 0;
+    --border-radius: 4px;
+    --border-radius--sm: calc(var(--border-radius) / 2);
+    --border-radius--md: calc(var(--border-radius) + (var(--border-radius) / 2));
+    --border-radius--xl: calc(var(--border-radius) * 2);
+    --border-radius--avatar: 100%;
+    --border: 1px solid var(--divider);
+    --border-light: 1px solid var(--divider--light);
+    --box-shadow-dis: 1px;
+    --box-shadow-blur: 17px;
+    --box-shadow-thickness: 1px;
+    --box-shadow-color: rgba(210, 210, 210, 0.4);
+    --box-shadow--hard: 0 var(--box-shadow-dis) var(--box-shadow-blur) var(--box-shadow-thickness) var(--box-shadow-color);
+    --box-shadow: 0 1px 2px rgba(70, 77, 87, 0.08);
+    --box-shadow--md: 0 0 20px rgba(70, 77, 87, 0.15);
+    --box-shadow--xl: 0 20px 30px rgba(70, 77, 87, 0.1);
+    --input-shadow: var(--color--primary--ultralight);
+    --input-shadow--in: var(--color--primary--light);
+    --bubble-bg: var(--color--warning);
+    --bubble-color: var(--color--app);
+    --avatar-radius: 50%;
+    --avatar-small: 32px;
+    --avatar-medium: 48px;
+    --avatar-normal: 64px;
+    --avatar-large: 100px;
+    --avatar-xlarge: 160px;
+    --avatar-width: var(--avatar-medium);
+    --avatar-box-shadow: 0 0 0 1px var(--divider);
+    --avatar-border: 2px solid transparent;
+    --av-size: var(--avatar-normal);
+    --av-margin: calc( 12px + var(--av-size));
+    --av-n-margin: calc(-1 * var(--av-margin));
+    --order--top: 100;
+    --order--header: var(--order--top);
+    --order--mobile-menu: 102;
+    --order--floatbox: 102;
+    --order--notification: 1000;
+    --order--prloader: 1001;
+    --order--tip: 10005;
+    --sidebar--width: #{$sidebar-width};
+}

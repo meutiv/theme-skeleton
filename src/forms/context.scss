@@ -1,0 +1,155 @@
+/* ---- Context Action styles ---- */
+
+.#{$class-prefix}context_action_block {
+    display: inline-block;
+    text-align: left;
+}
+
+.#{$class-prefix}bl a,
+.#{$class-prefix}context_action_value_block .#{$class-prefix}context_action,
+.#{$class-prefix}context_action {
+    display: inline-block;
+    padding: 2px 8px;
+    text-decoration: none;
+    text-transform: capitalize;
+    background: #000;
+    color: #fff;
+    font-size: 85%;
+    box-sizing: border-box;
+    height: inherit;
+    line-height: inherit;
+}
+
+.#{$class-prefix}bl a,
+.#{$class-prefix}profile_toolbar_group .#{$class-prefix}context_action {
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.#{$class-prefix}context_action {
+    position: relative;
+    z-index: 3;
+    vertical-align: top;
+}
+
+.#{$class-prefix}context_action_value,
+.#{$class-prefix}context_action_value:hover {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.#{$class-prefix}context_more {
+    display: inline-block;
+    min-width: 15px;
+    height: 18px;
+    padding: 0px 3px 0px 0px;
+    vertical-align: top;
+}
+
+.#{$class-prefix}context_more::after {
+    content: "\ea67";
+    display: block;
+}
+
+.#{$class-prefix}photo_context_action{
+    .#{$class-prefix}context_more::after{
+        content: "";
+    }
+}
+
+body .#{$class-prefix}context_action_value_block .#{$class-prefix}context_action .#{$class-prefix}context_more,
+body .#{$class-prefix}context_action_value_block .#{$class-prefix}context_action:hover .#{$class-prefix}context_more {
+    background-position: right 8px;
+}
+
+.#{$class-prefix}context_action:hover,
+.#{$class-prefix}context_action.active {
+    cursor: pointer;
+}
+
+.#{$class-prefix}context_action:hover .#{$class-prefix}context_action_wrap {
+    display: block;
+}
+
+.#{$class-prefix}context_action:hover .#{$class-prefix}context_action_value,
+.#{$class-prefix}context_action.active .#{$class-prefix}context_action_value {
+    text-decoration: none;
+}
+
+.#{$class-prefix}context_action_wrap {
+    /*position: absolute;
+      right: -1px;
+      top: 23px;
+      padding-top: 1px;
+      max-width: 250px;
+      display: none;*/
+}
+
+.#{$class-prefix}context_action_list {
+    min-width: 100px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.#{$class-prefix}context_action_list li {
+    white-space: nowrap;
+}
+
+.#{$class-prefix}context_action_list a {
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    padding: 3px 0px;
+    color: #828894;
+}
+
+.#{$class-prefix}context_action_list a:hover {
+    text-decoration: none;
+    background: var(--color--primary);
+    color: #fff;
+}
+
+.#{$class-prefix}context_action .#{$class-prefix}tooltip {
+    display: none;
+}
+
+.#{$class-prefix}context_action_divider {
+    line-height: 1px;
+    height: 1px;
+    background: #eff2f5;
+    border-bottom: 1px solid #fff;
+    margin: 1px 0px 0px;
+}
+
+
+/* Context Action on Profile View */
+
+.#{$class-prefix}profile_toolbar_group .#{$class-prefix}context_action {
+    margin-bottom: 4px;
+}
+
+
+/* ---- End of Context Action styles ---- */
+
+
+/* ---- Cover Context Action styles ---- */
+
+.uh-cover-add-btn-wrap .#{$class-prefix}context_action {
+    padding-left: 7px;
+}
+
+.uh-cover-add-btn-wrap .#{$class-prefix}tooltip_body {
+    padding: 4px 0px;
+}
+
+.uh-cover-add-btn-wrap .#{$class-prefix}context_action_list a {
+    padding: 4px 12px;
+}
+
+.uh-cover-add-btn-wrap .#{$class-prefix}context_action_value {
+    color: #5b646a;
+}
+
+
+/* ---- End of Cover Context Action styles ---- */

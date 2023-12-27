@@ -1,0 +1,11 @@
+.#{$class-prefix}page_container {
+    .#{$class-prefix}page {
+        display: block;
+        .#{$class-prefix}sidebar_cont {
+            display: none;
+        }
+        .#{$class-prefix}content {
+            width: 100%;
+        }
+    }
+}

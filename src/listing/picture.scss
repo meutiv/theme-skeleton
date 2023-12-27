@@ -1,0 +1,64 @@
+/* ---- Listing Picture styles ---- */
+
+.#{$class-prefix}lp_picture {
+    float: left;
+    margin: 0 1px 1px 0;
+}
+
+.#{$class-prefix}lp_avatars {
+    text-align: center;
+}
+
+.#{$class-prefix}lp_avatars .#{$class-prefix}lp_wrapper {
+    display: inline-block;
+    margin: 0 1px 1px 0;
+}
+
+.#{$class-prefix}lp_albums .#{$class-prefix}lp_wrapper,
+.#{$class-prefix}lp_groups .#{$class-prefix}lp_wrapper {
+    width: 72px;
+    height: 72px;
+    padding: 0px;
+    float: left;
+}
+
+.#{$class-prefix}lp_photos .#{$class-prefix}lp_wrapper {
+    width: 72px;
+    height: 72px;
+    padding: 0px;
+    margin: 0 2px 2px 0;
+    display: inline-block;
+    float: none;
+    text-align: left;
+}
+
+.#{$class-prefix}lp_avatars .#{$class-prefix}avatar {
+    margin: 1px;
+    text-align: left;
+}
+
+.#{$class-prefix}lp_photos img,
+.#{$class-prefix}lp_albums img,
+.#{$class-prefix}lp_groups img {
+    width: 72px;
+    height: 72px;
+}
+
+.#{$class-prefix}lp_label {
+    margin-left: 80px;
+}
+
+.#{$class-prefix}lp_avatars.#{$class-prefix}mini_avatar {
+    text-align: left;
+}
+
+a.avatar_list_more_icon {
+    width: 25px;
+    height: 32px;
+    display: inline-block;
+    margin: 0 1px;
+    background: #eee url(#{$image-path}more_icon.png) no-repeat 50% 50%;
+}
+
+
+/* ---- End of the Listing Picture styles ---- */

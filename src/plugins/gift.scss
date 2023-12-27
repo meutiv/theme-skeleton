@@ -1,0 +1,80 @@
+/* ---- Gift styles */
+
+.#{$class-prefix}gift_templates {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .#{$class-prefix}gift_wrapper {
+        flex-grow: 1;
+        margin: 0px 0px 4px 4px;
+        cursor: pointer;
+        padding-left: 5px;
+        height: 110px;
+        width: 100px;
+        margin: 0px 0px 4px 4px;
+        text-align: center;
+        position: relative;
+        @include browser-compatible(box-sizing, border-box);
+    }
+    .#{$class-prefix}gift_checked {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 20px;
+        height: 20px;
+        background-image: url(#{$image-path}ic_img/ic_ok.svg);
+        background-repeat: no-repeat;
+    }
+    ul {
+        &.#{$class-prefix}regular {
+            li {
+                list-style-position: inside;
+                margin: 0px;
+            }
+        }
+    }
+}
+
+.#{$class-prefix}gift_holder {
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    zoom: 1;
+    //display: inline;
+    overflow: hidden;
+    img {
+        height: 80px;
+    }
+}
+
+.#{$class-prefix}gift_helper {
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0px;
+    zoom: 1;
+    //display: inline;
+}
+
+.#{$class-prefix}gift_image {
+    float: left;
+    margin-right: -80px;
+    width: 80px;
+    img {
+        width: 80px;
+    }
+}
+
+.#{$class-prefix}gift_message {
+    margin-left: 80px;
+    padding-left: 10px;
+}
+
+.#{$class-prefix}gift_message_area {
+    height: 40px;
+}
+
+
+/* ---- End of the Gift styles */

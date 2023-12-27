@@ -1,0 +1,147 @@
+/* ---- content menu styles ---- */
+
+body {
+    .#{$class-prefix}content_menu_wrap {
+        &:not(.#{$class-prefix}scroll_menu_wrap) {
+            margin-bottom: 20px;
+            .#{$class-prefix}content_menu {
+                li {
+                    background: var(--color--app--gray);
+                    text-align: center;
+                    &.active {
+                        border-bottom: none;
+                        background: var(--color--app);
+                    }
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+    .#{$class-prefix}content_menu {
+        text-transform: capitalize;
+        font-weight: normal;
+        display: flex;
+        &.clearfix {
+            display: flex;
+        }
+        li {
+            position: relative;
+            flex-grow: 1;
+            a {
+                display: block;
+                color: var(--menu-link-color);
+                padding: 6px 15px;
+                font-size: 75%;
+                font-weight: normal;
+                span {
+                    display: block;
+                    background: transparent;
+                    background-image: none !important;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &.active {
+                a {
+                    text-decoration: none;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+/* ---- end of content menu styles ---- */
+
+
+/* profile content menu style */
+
+body {
+    .#{$class-prefix}scroll_menu_wrap {
+        --color-indicator: var(--color--primary--light);
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        background-color: var(--color--app);
+        border-top: 1px solid var(--divider--light);
+        margin-bottom: var(--padd--xl);
+        box-shadow: var(--box-shadow--hard);
+        .#{$class-prefix}content_menu {
+            font-size: 90%;
+            li {
+                text-align: center;
+                position: relative;
+                display: inline-block;
+                a {
+                    padding: var(--padd--sm) var(--padd--md);
+                    border-right: 1px solid var(--divider--light);
+                    color: var(--color--text--light);
+                    text-align: center;
+                    font-size: 90%;
+                    white-space: nowrap;
+                    span {
+                        &::before {
+                            margin-right: 5px;
+                        }
+                    }
+                    &.VerifiedMemberMiniTag {
+                        &::after {
+                            display: none !important;
+                        }
+                    }
+                }
+                &.active {
+                    border-color: transparent;
+                    a {
+                        color: var(--color--text)
+                    }
+                    &:after {
+                        content: " ";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -5px;
+                        display: block;
+                        width: 24px;
+                        height: 4px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        background-color: var(--color-indicator);
+                        border: 2px solid var(--color--app);
+                        border-radius: var(--border-radius);
+                        box-shadow: var(--box-shadow);
+                    }
+                }
+            }
+            &:not(.owl-loaded) {
+                display: flex;
+                li {
+                    flex-grow: 1;
+                    &:last-child {
+                        a {
+                            white-space: nowrap;
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+            .owl-item {
+                li {
+                    display: block;
+                    width: 100%;
+                }
+                &:last-child {
+                    li {
+                        a {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

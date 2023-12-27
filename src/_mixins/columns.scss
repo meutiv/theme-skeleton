@@ -1,0 +1,62 @@
+@import '../vendor/bootstrap/mixins/grid';
+@mixin make-base-grids( $prefix) {
+    /* Grid */
+    .#{$class-prefix}#{$prefix} {
+        &row {
+            @include make-row();
+            >* {
+                @include make-col-ready();
+                @include browser-compatible(box-sizing, border-box);
+            }
+        }
+        &narrow {
+            width: 40%;
+            overflow: hidden;
+        }
+        &wide {
+            width: 60%;
+            overflow: hidden;
+        }
+        &superwide {
+            width: 80%;
+            overflow: hidden;
+        }
+        &supernarrow {
+            width: 20%;
+            overflow: hidden;
+        }
+        &column {
+            width: 50%;
+            overflow: hidden;
+        }
+    }
+    /* Columns */
+    @for $col from 1 through 12 {
+        .#{$class-prefix}column_#{$prefix}#{$col},
+        .#{$class-prefix}col_#{$prefix}#{$col} {
+            @include make-col($col);
+            // $width: divide($col, 12);
+            // width: if($width==0, 0, percentage($width));
+        }
+    }
+    /* Column Fix */
+    .#{$class-prefix}column_#{$prefix}equal_fix {
+        padding-bottom: 20001px !important;
+        margin-bottom: -20000px !important;
+    }
+    /* Columns end */
+    /* Item Sets (Avatar list, Groups, Googgle popup)*/
+    @for $set from 1 through 5 {
+        .#{$class-prefix}item_#{$prefix}set#{$set} {
+            $width: divide(1, $set);
+            width: if($width==0, 0, percentage($width));
+        }
+    }
+}
+
+@mixin create_gutter() {
+    padding-right: calc(var(--gutter-x) * .5);
+    padding-left: calc(var(--gutter-x) * .5);
+    margin-top: var(--gutter-y);
+    @include browser-compatible(box-sizing, border-box);
+}

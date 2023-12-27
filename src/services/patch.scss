@@ -1,0 +1,105 @@
+.#{$class-prefix}newsfeed_avatar{
+    .#{$class-prefix}avatar_label{
+        bottom: 14px;
+        right: 4px;
+        font-size: 0.38rem;
+        padding-top: 0.05rem; 
+        padding-bottom: 0;
+    }
+}
+
+.#{$class-prefix}comments_item_picture{
+    .#{$class-prefix}avatar_label{
+        bottom: 6px;
+        right: 4px;
+        font-size: 0.38rem;
+        padding-top: 0.05rem; 
+        padding-bottom: 0;
+    }
+}
+
+.#{$class-prefix}comments_input_wrap{
+    .#{$class-prefix}comments_item_picture{
+        .#{$class-prefix}avatar_label{
+            bottom: 6px;
+            right: -12px;
+            font-size: 0.38rem; 
+            padding-top: 0.04rem; 
+            padding-bottom: 0; 
+        }
+    }
+}
+
+
+.#{$class-prefix}count_wrap{
+    position: absolute;
+    top: -10px !important;
+    right: 0 !important;
+}
+
+.OW_ConsoleItemCounterPlace{
+    font-size: 0.5rem !important;
+}
+
+.btn-primary{
+    font-size: 1rem !important;
+    line-height: 0.75rem !important;
+}
+.#{$class-prefix}context_more{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+}
+
+.#{$class-prefix}friend_request_list_action {
+    display: flex !important;
+    align-items: center !important;
+    font-size: 0.84rem !important;
+
+    
+}
+
+
+.#{$class-prefix}txtleft span{
+    line-height: 0.75rem !important;
+    font-size: 00.70rem !important;
+}
+
+
+.#{$class-prefix}moderation_content_wrap {
+    input[type="checkbox"]{
+        margin-left: -26px !important;
+        margin-top: 25px !important;
+    }
+}
+
+.forum_newsfeed_activity {
+    .#{$class-prefix}newsfeed_activity_content{
+        padding: 0.8rem 0;
+        margin: 0.8rem -18px 0;
+        background-color: #f8f8f8;
+    }
+}
+
+.#{$class-prefix}mini_ipc_header{
+    padding-top: 0.5rem;
+    padding-left: 0.5rem ;
+
+    .#{$class-prefix}mini_ipc_content{
+        margin-top: 0;
+    }
+}
+
+.#{$class-prefix}newsfeed_toolbar{
+    .#{$class-prefix}newsfeed_toolbar_space{
+        display: none;
+    }
+}
+
+
+
+
+
+
+

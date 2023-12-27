@@ -1,0 +1,83 @@
+/* ---- my avatar widget styles ---- */
+
+.#{$class-prefix}my_avatar_widget {}
+
+.#{$class-prefix}my_avatar_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    margin-top: calc(-1 * var(--padd--md));
+    margin-left: calc(-1 * var(--padd--md));
+    margin-right: calc(-1 * var(--padd--md));
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.#{$class-prefix}my_avatar_widget {
+    .#{$class-prefix}box_cap_body h3 {
+        margin-left: calc(-1 * (var(--padd--md)));
+        margin-right: calc(-1 * (var(--padd--md)));
+        padding: var(--padd--md);
+        font-size: 80%;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-top: 2px solid var(--divider--light);
+        border-bottom: 2px solid var(--divider--light);
+    }
+    @include do-list('ul', 'li', 'a', true);
+    li {
+        a {
+            span {
+                &.#{$class-prefix}ic {
+                    &::before {
+                        color: var(--color--text);
+                        display: inline-block;
+                        background: #E2E8EC;
+                        border-radius: 100%;
+                        padding: var(--padd--sm) var(--padd);
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.#{$class-prefix}my_avatar {
+    position: relative;
+}
+
+.#{$class-prefix}my_avatar_img {
+    position: relative;
+    z-index: 1;
+    .#{$class-prefix}avatar {
+        width: var(--avatar-large);
+        height: var(--avatar-large);
+        img {
+            border: 5px solid var(--color--app);
+        }
+    }
+}
+
+.#{$class-prefix}my_avatar_username {
+    display: inline-block;
+    color: var(--color--heading);
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+.#{$class-prefix}my_avatar_cont {}
+
+.#{$class-prefix}my_avatar_cont span {
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+
+/* ---- end of my avatar widget styles ---- */

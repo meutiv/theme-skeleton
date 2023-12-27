@@ -1,0 +1,127 @@
+.#{$class-prefix}ipc_header {
+    margin-bottom: 4px;
+}
+
+.#{$class-prefix}lp_label br {
+    margin: 6px 0;
+}
+
+body .#{$class-prefix}searchbar input[type="text"] {
+    height: 28px;
+    line-height: 18px;
+}
+
+iframe {
+    width: 100% !important;
+    height: auto;
+}
+
+body .#{$class-prefix}moderation_wrap {
+    margin-left: 0;
+}
+
+body .#{$class-prefix}moderation_sticky {
+    width: 100%;
+    margin-left: 0;
+}
+
+body .#{$class-prefix}forgot_password {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 20px;
+}
+
+body .customize_box {
+    display: none;
+}
+
+.#{$class-prefix}box_menu,
+ul.#{$class-prefix}bl a {
+    line-height: 25px;
+}
+
+.#{$class-prefix}box_menu a,
+ul.#{$class-prefix}bl a {
+    height: auto;
+}
+
+.#{$class-prefix}box_menu a span {
+    font-size: 1.1rem;
+}
+
+.#{$class-prefix}ipc_header a {
+    font-size: 1.1rem;
+}
+
+.#{$class-prefix}small {
+    font-size: 1.05rem;
+    line-height: 18px;
+}
+
+.#{$class-prefix}ipc_toolbar,
+.#{$class-prefix}ipc_toolbar .#{$class-prefix}ipc_date,
+.#{$class-prefix}ipc_date {
+    font-size: 1.1rem;
+}
+
+html body a.#{$class-prefix}lbutton,
+html body span.#{$class-prefix}lbutton {
+    font-size: 1rem;
+    line-height: 1.2em;
+}
+
+.#{$class-prefix}comments_item_header a {
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select,
+div.jhtmlarea,
+.#{$class-prefix}photo_upload_description,
+.#{$class-prefix}photo_preview_edit .CodeMirror {
+    font-size: 1.15rem;
+}
+
+.#{$class-prefix}credits_links a {
+    font-size: 1rem;
+}
+
+a.#{$class-prefix}context_action_value,
+.#{$class-prefix}context_action_list a {
+    font-size: 1rem;
+}
+
+input[type="submit"],
+input[type="button"] {
+    font-size: 1.15rem;
+}
+
+.#{$class-prefix}attachment_btn span.#{$class-prefix}button input[type="submit"],
+.#{$class-prefix}attachment_btn span.#{$class-prefix}button input[type="button"] {
+    line-height: 21px;
+}
+
+body .#{$class-prefix}box_toolbar {
+    font-size: 0.95rem;
+}
+
+
+/*Avatar size*/
+
+.#{$class-prefix}comments_item_header {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+/*Forum*/
+
+.forum_add_post .#{$class-prefix}left,
+.forum_add_post .#{$class-prefix}right {
+    width: 100% !important;
+    float: none;
+}

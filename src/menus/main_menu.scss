@@ -1,0 +1,69 @@
+/* ---- Main Menu styles ---- */
+
+.#{$class-prefix}menu_wrap {
+    padding: 0;
+    position: relative;
+    .#{$class-prefix}main_menu {
+        overflow: hidden;
+        display: flex !important;
+        li {
+            padding: 0;
+            display: block;
+            border-bottom: solid 2px transparent;
+            flex-grow: 1;
+            text-align: center;
+            a {
+                color: var(--menu-color);
+                display: inline-block;
+                font-size: 18px;
+                padding: 0 1vw;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-weight: normal;
+                height: calc(var(--header-height) - 1px);
+                span {
+                    font-size: #{$menu-text-size};
+                    display: inline-block;
+                    position: relative;
+                    padding: var(--padd--sm) 0 0;
+                    &::before {
+                        @include icofont($menu-icon-size);
+                        @include icon-name('app');
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+            .#{$class-prefix} a:hover,
+            .#{$class-prefix} &.active a {
+                color: var(--menu-active-color);
+            }
+            &.active {
+                border-color: var(--menu-active-color);
+            }
+            @include add-menu-icon('.base_dashboard', 'dashboard');
+            @include add-menu-icon('.base_main_menu_index', 'home');
+            @include add-menu-icon('.debate_main_menu_list', 'debate');
+            @include add-menu-icon('.base_main_menu_my_profile', 'myprofile');
+            @include add-menu-icon('._complete_profile', 'myprofile');
+            @include add-menu-icon('.equestions_main_menu_list', 'equestions');
+            @include add-menu-icon('.musicextreme_main_menu_text', 'musicextreme');
+            @include add-menu-icon('.base_users_main_menu_item', 'usersmenu');
+            @include add-menu-icon('.photo_photo', 'photomenu');
+            @include add-menu-icon('.video_video', 'videomenu');
+            @include add-menu-icon('.groups_main_menu_list', 'groupsmenu');
+            @include add-menu-icon('.event_main_menu_item', 'eventmenu');
+            @include add-menu-icon('.blogs_main_menu_item', 'blogs');
+            @include add-menu-icon('.links_main_menu_item', 'links');
+            @include add-menu-icon('.forum_forum', 'forumitem');
+            @include add-menu-icon('.base_base_join_menu_item', 'join');
+            @include add-menu-icon('.usearch_menu_item_search', 'usearch');
+            @include add-menu-icon('.membership_subscribe_page_heading', 'membership');
+            @include add-menu-icon('.webcilo_products', 'products');
+            @include add-menu-icon('.ebooks_ebooks', 'ebooks');
+        }
+    }
+}
+
+
+/* ---- End of Main Menu styles ---- */

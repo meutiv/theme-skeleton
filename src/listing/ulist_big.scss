@@ -1,0 +1,78 @@
+/* ---- Ulist big Styles ---- */
+
+.#{$class-prefix}ulist_big {
+    padding-top: 12px;
+}
+
+.#{$class-prefix}ulist_big_item {
+    float: left;
+    width: 25%;
+}
+
+.#{$class-prefix}ulist_big_item .#{$class-prefix}miniic_live {
+    top: 2px;
+    left: 2px;
+    position: absolute;
+}
+
+.#{$class-prefix}ulist_big_item_cont {
+    height: 260px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+}
+
+.#{$class-prefix}ulist_big_avatar {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    position: relative;
+    width: 180px;
+}
+
+.#{$class-prefix}ulist_big_avatar:hover {
+    box-shadow: 0 0 150px #000 inset;
+}
+
+.#{$class-prefix}ulist_big_avatar_shadow {
+    display: block;
+    height: 180px;
+}
+
+.#{$class-prefix}ulist_big_avatar>a.#{$class-prefix}ulist_big_avatar_bookmark {
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+    color: #fff;
+    display: none;
+}
+
+.#{$class-prefix}ulist_big_avatar:hover a.#{$class-prefix}ulist_big_avatar_bookmark {
+    display: block;
+}
+
+.#{$class-prefix}ulist_big_info {
+    margin-top: 4px;
+    position: absolute;
+    margin-bottom: 8px;
+}
+
+.#{$class-prefix}ulist_big_info_name .#{$class-prefix}small {
+    position: relative;
+}
+
+.#{$class-prefix}ulist_big_info_name .#{$class-prefix}small:hover {
+    text-decoration: underline;
+}
+
+.#{$class-prefix}ulist_big_info_name {
+    float: left;
+    max-width: 160px;
+    max-height: 1.5em;
+    overflow: hidden;
+}
+
+
+/* ---- End of Ulist big Styles Styles ---- */

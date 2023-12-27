@@ -1,0 +1,59 @@
+$class-prefix: 'mt_' !default;
+$image-path: '../images/' !default;
+$font-path: '../webfonts/' !default;
+$internal-path: 'src' !default;
+$external-path: 'css' !default;
+
+$PATH_COMMON: 'common';
+$PATH_PLUGIN: 'plugins';
+$PATH_SERVICE: 'service';
+
+@import "vendor/bootstrap/functions";
+
+@function percent_value($value, $percent) {
+    $divide: divide($percent, 100);
+    @return calc(#{$value} * #{$divide});
+}
+
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+$font-size: 16px;
+$small-font-size: 14px;
+$xsmall-font-size: 12px;
+$line-hight: 24px;
+$small-line-height: 19.88px;
+$xsmall-line-height: 15.6px;
+$letter-spacing: 1.68%;
+$md-letter-spacing: 3%;
+$lg-letter-spacing: 5%;
+$radius: 25px;
+$radius-sm: 5px;
+$radius-md: 8px;
+$radius-lg: 50px;
+$radius-xl: 100px;
+$padd-canvas: 30px;
+$console-icon-wh: 18px;
+$console-avatar: 60px;
+$pad-sm: 8px;
+$avatar-40: 40px;
+$photo-height: 179px;
+$photo-height-lg: 272px;
+// $input-line-height: 40px;
+
+$internal-components: ('common', 'content', 'forms', 'layouts', 'listing', 'menus', 'plugins', 'thumbnail'); // scss-docs-start grid-breakpoints
+$max-breakpoints: ( xxl: 1400px, xl: 1200px, lg: 992px, md: 768px, sm: 576px, xs: 0) !default;
+$chat-message-font-size: calc((var(--font-size) * 14)/ 19);
+$menu-icon-size: percent_value($font-size, 160);
+$menu-text-size: percent_value($font-size, 80);
+$feed-icon-size: percent_value($font-size, 160);
+$header-height: 55px;
+$sidebar-width: 330px;
+
+// scss-docs-end grid-breakpoints
+@import "vendor/bootstrap/functions";
+@import "vendor/bootstrap/variables";
+@import "vendor/bootstrap/mixins";
+@import "vendor/bootstrap/utilities";
+@import "_mixins/init.scss";
+@import 'theme.scss';

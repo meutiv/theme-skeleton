@@ -1,0 +1,146 @@
+/********************************************************************************
+  *
+  *     Filename:        default.css
+  *     Description:     Peepso Theme Base CSS File
+  *     Version:         1.0.0
+  *
+  *     -- FILE STRUCTURE: --
+  *
+  *     [ 1] CSS Defaults Reset          __reset
+  *     [ 2] Clearfix                    __clearfix
+  *     [ 3] Base Elements               __base
+  *     [ 4] Typography                  __typography
+  *     [ 5] Masterpage & Page Layout    __layout
+  *     [ 6] Menus                       __menus
+  *     [ 7] Pagination                  __pagination
+  *     [ 8] Content Items               __content items
+  *     [ 9] Common Blocks               __blocks
+  *     [10] Forms                       __forms
+  *     [11] Tables                      __tables
+  *     [12] Standard Listings           __listings
+  *     [13] Thumbnails & Icons          __icons
+  *     [14] Notifications               __notifications
+  *		  [15] Default Classes			 __default classes
+  *     [16] Plugin Styles               __plugins
+  *     [17] Misc                        __misc
+  *     [18] Responsive                  __responsive
+  *
+ ********************************************************************************/
+
+@import 'variables.scss';
+
+/*========================================================
+    [1] CSS Defaults Reset      __reset
+========================================================*/
+
+@import 'services/defaults.scss';
+
+/*========================================================
+[2] Clearfix        __clearfix
+========================================================*/
+
+@import 'services/clearfix.scss';
+
+/*========================================================
+[3] Base Elements       __base
+========================================================*/
+
+@import 'services/elements.scss';
+
+/*========================================================
+[4] Typography        __typography
+========================================================*/
+
+@import 'fonts/icofont.scss';
+@import 'fonts/lato.scss';
+@import 'fonts/source_sans_pro.scss';
+@import 'services/typography.scss';
+
+/*========================================================
+[5] Masterpage & Page Layout        __layout
+========================================================*/
+
+@import 'services/layout.scss';
+
+/*========================================================
+[6] Menus        __menus
+========================================================*/
+
+@import 'services/menus.scss';
+
+/*========================================================
+[7] Pagination        __pagination
+========================================================*/
+
+@import 'services/pagination.scss';
+
+/*========================================================
+[8] Content Items        __content items
+========================================================*/
+
+@import 'services/content.scss';
+
+/*========================================================
+[9] Common Blocks        __blocks
+========================================================*/
+
+@import 'services/common.scss';
+
+/*========================================================
+[10] Forms        __forms
+========================================================*/
+
+@import 'services/forms.scss';
+
+/*=======================================================
+[11] Tables        __tables
+========================================================*/
+
+@import 'services/tables.scss';
+
+/*========================================================
+[12] Standard Listings        __listings
+========================================================*/
+
+@import 'services/listing.scss';
+
+/*========================================================
+[13] Thumbnails & Icons        __icons
+========================================================*/
+
+@import 'services/thumbnails.scss';
+
+/*===========================================================
+[14] Notifications        __notifications
+===========================================================*/
+
+@import 'services/notifications.scss';
+
+/*========================================================
+[15] Default Classes      __default classes
+========================================================*/
+
+@import 'services/classes.scss';
+
+/*========================================================
+[16] Plugin Styles        __plugins
+========================================================*/
+
+@import 'services/plugins.scss';
+
+/*========================================================
+[17] Misc        __misc
+========================================================*/
+
+@import 'services/misc.scss';
+
+/* Import All CSS */
+
+@import 'services/animate.scss';
+
+/*========================================================
+[18] Responsive        __responsive
+========================================================*/
+
+@import 'services/responsive.scss';
+@import 'services/patch.scss';

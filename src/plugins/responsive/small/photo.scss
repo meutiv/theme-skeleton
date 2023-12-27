@@ -1,0 +1,116 @@
+/*-------------------------Photo-------------------------*/
+
+body {
+    .#{$class-prefix}photo_list_wrap.#{$class-prefix}photo_no_sidebar div.#{$class-prefix}photo_item_wrap,
+    .#{$class-prefix}photo_list_wrap.#{$class-prefix}photo_no_sidebar .#{$class-prefix}photo_list.#{$class-prefix}photo_pint_mode .#{$class-prefix}photo_item_wrap,
+    .#{$class-prefix}photo_list_wrap.#{$class-prefix}photo_no_sidebar div.#{$class-prefix}photo_item_wrap.#{$class-prefix}photo_album,
+    .#{$class-prefix}photo_list.#{$class-prefix}photo_pint_mode .#{$class-prefix}photo_item_wrap {
+        width: calc(100% / 2);
+        position: static;
+    }
+    .#{$class-prefix}photo_list_wrap.#{$class-prefix}photo_no_sidebar .#{$class-prefix}photo_list.#{$class-prefix}photo_pint_mode div.#{$class-prefix}photo_item_wrap {
+        height: 300px;
+        overflow: hidden;
+    }
+    .#{$class-prefix}photo_list.#{$class-prefix}photo_pint_mode .#{$class-prefix}photo_item_wrap .#{$class-prefix}photo_pint_album img {
+        min-height: 100%;
+    }
+    .#{$class-prefix}photo_list_wrap div.#{$class-prefix}photo_item,
+    .#{$class-prefix}photo_pint_album {
+        height: 100%;
+    }
+    .#{$class-prefix}photo_list.#{$class-prefix}photo_pint_mode .#{$class-prefix}photo_item_wrap .#{$class-prefix}photo_pint_album {
+        overflow: hidden;
+        text-align: center;
+    }
+    .#{$class-prefix}photo_list.#{$class-prefix}photo_pint_mode .#{$class-prefix}photo_item_wrap .#{$class-prefix}photo_pint_album img {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .#{$class-prefix}photo_item .#{$class-prefix}photo_item_info_description {
+        display: none !important;
+    }
+    .#{$class-prefix}photo_list_wrap .#{$class-prefix}photo_item_wrap .#{$class-prefix}photo_item_info {
+        display: none !important;
+    }
+    .#{$class-prefix}photo_preview_x,
+    .#{$class-prefix}photo_preview_rotate {
+        display: block;
+    }
+    #photo-list-search {
+        float: none;
+    }
+    .#{$class-prefix}fw_menu .#{$class-prefix}fw_btns {
+        margin-bottom: 8px;
+    }
+    .#{$class-prefix}fw_menu {
+        border: none;
+        padding: 0;
+    }
+    .#{$class-prefix}fw_menu .#{$class-prefix}searchbar {
+        margin-top: 4px;
+        padding-right: 24px;
+        width: 100%;
+        display: inline-block !important;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .#{$class-prefix}fw_menu .#{$class-prefix}searchbar_input,
+    .#{$class-prefix}fw_menu .#{$class-prefix}searchbar_input input {
+        width: 100% !important;
+    }
+    .#{$class-prefix}fw_menu .#{$class-prefix}searchbar .#{$class-prefix}searchbar_btn {
+        margin-right: -24px;
+    }
+    .#{$class-prefix}photo_upload_bottom>.#{$class-prefix}left,
+    .#{$class-prefix}photo_upload_wrap .#{$class-prefix}suggest_field input {
+        width: 100% !important;
+    }
+    .#{$class-prefix}photo_upload_wrap .#{$class-prefix}photo_preview_block_wrap .#{$class-prefix}photo_preview_edit {
+        width: 48%;
+        margin-left: 1% !important;
+        margin-right: 1% !important;
+        margin-bottom: 10px !important;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .#{$class-prefix}photo_preview_action {
+        overflow: hidden;
+    }
+    .CodeMirror-scroll,
+    .CodeMirror-sizer {
+        width: 100%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    .CodeMirror-hscrollbar {
+        display: none !important;
+    }
+    .new-album textarea {
+        margin-bottom: 16px;
+    }
+    .#{$class-prefix}photoview_info_wrap {
+        display: none !important;
+    }
+    .#{$class-prefix}photoview_stage_wrap {
+        width: 100% !important;
+    }
+    .#{$class-prefix}photoview_wrap {
+        .#{$class-prefix}photo_context_action {
+            right: unset;
+            left: 16px;
+            .#{$class-prefix}tooltip {
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+}

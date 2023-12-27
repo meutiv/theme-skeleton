@@ -1,0 +1,23 @@
+$sectionImage: '1. General Settings'; // General section
+$sectionImage: '3. Images'; // Image section
+$sectionColor: "4. Colors"; // Color section
+$sectionSocial: "5. Social Links"; // Social links
+
+// Configuration
+@function set-config($value, $type, $sectionLabel, $key, $label) {
+    @return unquote("#{$value} /** OW_Control type:#{$type}, section:#{$sectionLabel}, key:#{$key}, label:#{$label} **/");
+}
+
+@function set-image-config( $image, $sectionLabel, $key, $label) {
+    @return set-config("url(#{$image-path}#{$image})", 'image', $sectionLabel, $key, $label);
+}
+
+// set logo image
+$light-logo: set-image-config('core-img/logo.png', $sectionImage, 'logoImage', 'Logo (Light)');
+$dark-logo: set-image-config('core-img/logo.png', $sectionImage, 'logoAlt', 'Logo (Dark)');
+$mini-logo: set-image-config('core-img/logo-mini.png', $sectionImage, 'logoMini', 'Mini logo (Light)');
+$mini-logo: set-image-config('core-img/logo-mini.png', $sectionImage, 'logoMiniAlt', 'Mini logo (Dark)');
+$header-image: set-image-config('bg-img/header_bg1.png', $sectionImage, 'headerBg', 'Header background');
+$header-image-content: set-image-config('bg-img/preview.png', $sectionImage, 'headerImage', 'Header content image');
+$nuelogin-bg: set-image-config('bg-img/preview.png', $sectionImage, 'nueloginBg', 'Login Background');
+$nuelogin-content-image: set-image-config('bg-img/preview.png', $sectionImage, 'nueloginImage', 'Login Page content image');

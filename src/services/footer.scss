@@ -1,0 +1,253 @@
+.#{$class-prefix}webcilo_footer,
+.#{$class-prefix}webcilo_footer * {
+    box-sizing: border-box;
+}
+
+.#{$class-prefix}webcilo_footer {
+    background: var(--webcilo-footer-bg-color);
+    color: var(--webcilo-footer-color);
+    padding: 2em 1em;
+    text-align: left;
+}
+
+.#{$class-prefix}webcilo_frow {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.#{$class-prefix}webcilo_fcol,
+.#{$class-prefix}webcilo_column {
+    position: relative;
+    width: 100%;
+}
+
+.#{$class-prefix}webcilo_fcol {
+    -ms-flex: 0 0 var(--webcilo-footer-column-width);
+    flex: 0 0 var(--webcilo-footer-column-width);
+    max-width: var(--webcilo-footer-column-width);
+}
+
+.#{$class-prefix}webcilo_footer_col_left {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.#{$class-prefix}webcilo_footer_col_right {
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.fow_webcilo_fcont {
+    padding: 5px 20px 5px 5px;
+    text-align: left;
+}
+
+.footer-content {
+    width: 33.3%;
+}
+
+.#{$class-prefix}webcilo_footer_col_left .fow_webcilo_fcont {
+    width: 60%;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .#{$class-prefix}webcilo_footer_col_left {
+        -ms-flex: 0 0 calc(100%/3);
+        flex: 0 0 calc(100%/3);
+        max-width: calc(100%/3);
+    }
+    .#{$class-prefix}webcilo_footer_col_right {
+        -ms-flex: 0 0 calc((100%/3) * 2);
+        flex: 0 0 calc((100%/3) * 2);
+        max-width: calc((100%/3) * 2);
+    }
+    .#{$class-prefix}webcilo_fcol {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .#{$class-prefix}webcilo_footer_col_left .fow_webcilo_fcont {
+        width: 100%;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1100px) {
+    .#{$class-prefix}webcilo_fcol {
+        -ms-flex: 0 0 var(--webcilo-footer-column-width);
+        flex: 0 0 var(--webcilo-footer-column-width);
+        max-width: var(--webcilo-footer-column-width);
+    }
+}
+
+@media (max-width: 480px) {
+    .#{$class-prefix}webcilo_fcol,
+    .#{$class-prefix}webcilo_footer_col_left,
+    .#{$class-prefix}webcilo_footer_col_right {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .#{$class-prefix}webcilo_footer_col_right,
+    .#{$class-prefix}webcilo_footer_col_left,
+    .#{$class-prefix}webcilo_footer_col_left .fow_webcilo_fcont {
+        width: 100%;
+    }
+}
+
+.#{$class-prefix}webcilo_footer_ca_btn {
+    background: var(--webcilo-footer-bg-color);
+    border: solid 2px var(--webcilo-footer-link-color);
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px 0;
+    width: 100%;
+    color: var(--webcilo-footer-link-color);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* Footer content style */
+
+.#{$class-prefix}webcilo_footer_column_title {
+    color: var(--webcilo-footer-heading-color);
+    border-bottom: 2px solid var(--webcilo-footer-heading-border);
+    margin-bottom: 15px;
+    padding: 0px 0px 10px;
+}
+
+.#{$class-prefix}webcilo_footer_logo {
+    width: 100px;
+    padding-bottom: 1em;
+}
+
+.#{$class-prefix}webcilo_footer_intro_text {
+    margin-bottom: .5em;
+}
+
+.#{$class-prefix}webcilo_footer_intro_text,
+.#{$class-prefix}webcilo_footer_copyright {
+    font-weight: bold;
+    text-align: left;
+}
+
+.#{$class-prefix}webcilo_footer_copyright {
+    margin: 60px 0px 0px;
+}
+
+.#{$class-prefix}webcilo_footer ul:not(.#{$class-prefix}webcilo_footer_social) li {
+    list-style-type: none;
+    position: relative;
+}
+
+.#{$class-prefix}webcilo_footer ul:not(.#{$class-prefix}webcilo_footer_social) li a {
+    display: block;
+    text-decoration: none;
+    color: var(--webcilo-footer-link-color);
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--webcilo-footer-link-color);
+    text-transform: capitalize;
+}
+
+.#{$class-prefix}webcilo_footer ul:not(.#{$class-prefix}webcilo_footer_social) li a:hover {
+    color: #fff;
+}
+
+.#{$class-prefix}webcilo_footer ul:not(.#{$class-prefix}webcilo_footer_social) li a::after {
+    content: ">";
+    display: block;
+    float: right;
+}
+
+ul.#{$class-prefix}webcilo_footer_social {
+    display: block;
+    text-align: center;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li {
+    display: inline-block;
+    margin: 4px;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    font-size: 0px;
+    height: 32px;
+    width: 32px;
+    background: no-repeat center center var(--webcilo-footer-bg-color);
+    background-size: 16px 16px;
+    border-radius: 100%;
+    text-decoration: none;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.facebook {
+    background-image: url(#{$image-path}facebook-f.svg);
+    background-color: #3C5A98;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.twitter {
+    background-image: url(#{$image-path}twitter.svg);
+    background-color: #38A8DF;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.youtube {
+    background-image: url(#{$image-path}youtube.svg);
+    background-color: #FF0000;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.pinterest {
+    background-image: url(#{$image-path}pinterest.svg);
+    background-color: #E60023;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.reddit {
+    background-image: url(#{$image-path}reddit.svg);
+    background-color: #FF5700;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.skype {
+    background-image: url(#{$image-path}skype.svg);
+    background-color: #00aff0;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.snapchat {
+    background-image: url(#{$image-path}snapchat.svg);
+    background-color: #FFFC00;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.telegram {
+    background-image: url(#{$image-path}telegram.svg);
+    background-color: #0088cc;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.whatsapp {
+    background-image: url(#{$image-path}whatsapp.svg);
+    background-color: #075e54;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.vimeo {
+    background-image: url(#{$image-path}vimeo.svg);
+    background-color: #86c9ef;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.trello {
+    background-image: url(#{$image-path}vimeo.svg);
+    background-color: #1675B9;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.tumblr {
+    background-image: url(#{$image-path}tumblr.svg);
+    background-color: #34526f;
+}
+
+ul.#{$class-prefix}webcilo_footer_social li a.instagram {
+    background-image: url(#{$image-path}instagram.svg);
+    background-color: #3f729b;
+}

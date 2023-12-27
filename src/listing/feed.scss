@@ -1,0 +1,114 @@
+.#{$class-prefix}post_entry {
+    --radius: var(--border-radius--xl);
+    --shadow: var(--box-shadow--hard);
+    --line-height: var(--line-height);
+    --feed--gutter: var(--padd--md);
+    --text-color: var(--color--text);
+    background-color: var(--color--app);
+    font-size: 100%;
+    list-style-image: none;
+    padding: 0;
+    position: relative;
+    margin-bottom: var(--padd--md);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    border: solid 1px var(--divider--light);
+    &:not(.post-topic) {
+        @include browser-compatible(border-radius, var(--radius));
+        @include browser-compatible(box-shadow, var(--shadow));
+    }
+    .#{$class-prefix}post_entry_header {
+        padding: var(--feed--gutter);
+        .#{$class-prefix}post_entry_author {
+            .#{$class-prefix}avatar {}
+            .#{$class-prefix}post_entry_summary {
+                .#{$class-prefix}post_author_title {
+                    .#{$class-prefix}post_author_link {}
+                    .post-follow-user {}
+                }
+                .#{$class-prefix}post_entry_toolbar {
+                    .#{$class-prefix}box_toolbar {
+                        margin: 0;
+                        padding: 0;
+                        li {
+                            float: unset;
+                            margin: 0;
+                            padding: 0;
+                            a {
+                                background: transparent;
+                                color: inherit;
+                                display: inline;
+                                padding: 0;
+                                font-size: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .#{$class-prefix}post_entry_title {
+            font-size: 100%;
+        }
+    }
+    .#{$class-prefix}post_entry_body {
+        padding: 0 var(--feed--gutter);
+        &:not(.active) {
+            .#{$class-prefix}post_entry_content {
+                // display: none !important;
+            }
+        }
+        &.active {
+            .#{$class-prefix}post_entry_excerpt,
+            .#{$class-prefix}post_entry_thumbnail {
+                // display: none !important;
+            }
+        }
+    }
+    .#{$class-prefix}post_entry_footer {
+        padding: var(--feed--gutter) 0;
+        .#{$class-prefix}post_entry_btns {
+            padding: 0 var(--feed--gutter);
+            .#{$class-prefix}miniic_control,
+            .#{$class-prefix}btn_vote::before,
+            .#{$class-prefix}feed_action_btn::before {
+                font-size: $feed-icon-size;
+            }
+            .#{$class-prefix}post_entry_control {
+                .#{$class-prefix}vote,
+                .#{$class-prefix}miniic_control {
+                    margin-right: 4px;
+                }
+                .#{$class-prefix}post_btn_item {
+                    .#{$class-prefix}miniic_control {}
+                    .#{$class-prefix}post_btn_label {}
+                    .#{$class-prefix}post_btn_string {}
+                }
+            }
+            .#{$class-prefix}post_entry_btns_right {
+                .#{$class-prefix}context_action {
+                    background-color: transparent;
+                    color: var(--text-color);
+                    padding: 0;
+                    margin: 0;
+                    .#{$class-prefix}context_action_value {
+                        color: var(--text-color);
+                        &.#{$class-prefix}post_btn_share {}
+                        &.#{$class-prefix}post_btn_more {}
+                    }
+                    .#{$class-prefix}context_more {
+                        display: none !important;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .#{$class-prefix}post_entry_comments {
+            padding: 0 var(--feed--gutter);
+            &:not(.active) {
+                // display: none;
+            }
+        }
+    }
+}

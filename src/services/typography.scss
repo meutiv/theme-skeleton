@@ -1,0 +1,53 @@
+/* Fonts Styles */
+
+html,
+body {
+    --font-iconfont: "IcoFont";
+    --font-fontawesome: "Font Awesome 5 Free";
+    --font-lato: "Lato";
+    --font-source-sans-pro: "Source Sans Pro", HelveticaNeue, Helvetica, Arial, Sans;
+}
+
+[class*=" icofont-"],
+[class^=icofont-] {
+    line-height: unset;
+}
+
+
+/* Font Icons */
+
+.#{$class-prefix}nav_close_btn::before,
+.#{$class-prefix}console_btn::before,
+.#{$class-prefix}console_console_close_btn::before,
+.#{$class-prefix}attachments a:not(.#{$class-prefix}btn_add_giphy)::before,
+.#{$class-prefix}context_more,
+.#{$class-prefix}card_cover_img:not(img),
+html body div *[class^="#{$class-prefix}ic_"]:before,
+html body div *[class*="#{$class-prefix}ic_"]:before,
+html body span[class*="#{$class-prefix}ic_"]:before,
+.#{$class-prefix}console_item:not(.#{$class-prefix}user_profile_console) a.#{$class-prefix}console_item_link::before,
+.#{$class-prefix}more_menu_dropdown:before,
+.#{$class-prefix}menu_icon_block .#{$class-prefix}main_menu_item::before {
+    @include icofont();
+}
+
+html body div *[class^="#{$class-prefix}fa_"]:before,
+html body div *[class*="#{$class-prefix}fa_"]:before,
+html body span[class*="#{$class-prefix}fa_"]:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    display: inline-block;
+    text-rendering: auto;
+    speak: none;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// @import 'fontawesome/regular.scss';
+@import '../vendor/fontawesome/solid.scss';
+@import '../fonts/ic.scss';

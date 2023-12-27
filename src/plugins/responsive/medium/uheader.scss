@@ -1,0 +1,119 @@
+$header-avatar-width:100px;
+
+/* Profile Cover */
+
+.uh-head-text {
+    margin-left: 0 !important;
+}
+
+.uh-head {
+    margin: 0 !important;
+    .uh-avatar {
+        float: unset;
+        margin-top: -40px;
+        .uh-avatar-console {
+            height: $header-avatar-width;
+            width: $header-avatar-width;
+            margin: 0 auto;
+            div {
+                &.hg-avatar-image {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .uh-toolbox {
+        margin-left: 0;
+        .uh-action-toolbar {
+            float: unset;
+            .#{$class-prefix}profile_action_toolbar {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                li {
+                    flex-grow: 1;
+                    margin: 0;
+                    width: 50%;
+                    display: block;
+                    a {
+                        padding: 2px 4px;
+                        margin: 1px;
+                        font-size: 60% !important;
+                        text-align: center;
+                    }
+                }
+            }
+            .#{$class-prefix}context_action_block {
+                margin: 0 !important;
+                width: 50%;
+                .#{$class-prefix}context_action {
+                    padding: 2px 4px;
+                    margin: 1px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    a {
+                        font-size: 60% !important;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Group Cover */
+
+body {
+    .gh-header {
+        margin: -16px -10px 0;
+        .uh-cover,
+        .uh-cover-wrap {
+            padding-bottom: 50px;
+        }
+        div.uh-head-text-wrap {
+            padding-left: 20px;
+        }
+        .uh-head-text {
+            float: unset;
+            width: 100%;
+        }
+        .uh-action-toolbar-wrap {
+            float: unset;
+        }
+        ul.h-tabs {
+            display: flex !important;
+            height: auto;
+        }
+        .h-tabs li {
+            flex-grow: 1;
+            padding: 4px 6px 5px;
+        }
+    }
+    .uh-avatar {
+        box-shadow: none;
+    }
+    .webcilo-uh-header {
+        .uh-head-text-wrap {
+            top: 0;
+        }
+        .uh-avatar {
+            margin-top: -40px;
+            .uh-avatar-console {
+                div.hg-avatar-image {
+                    height: inherit;
+                    width: inherit;
+                }
+                .uh_avatar_change {
+                    left: 140px;
+                }
+            }
+        }
+        .uh-toolbox {
+            margin-left: 0;
+        }
+    }
+}

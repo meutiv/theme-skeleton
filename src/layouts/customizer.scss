@@ -1,0 +1,316 @@
+.#{$class-prefix}dragndrop_content>.clearfix,
+#place_sections>div>div.clearfix {
+    width: 100%;
+}
+
+#place_sections {
+    .place_section {
+        &.#{$class-prefix}left {
+            padding-right: var(--gutter-x);
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+/* ---- Index customizer */
+
+.#{$class-prefix}dragndrop_content {
+    float: left;
+    width: 100%;
+}
+
+.index_master_page {
+    .#{$class-prefix}dragndrop_content {
+        width: 100%;
+    }
+}
+
+
+/* ---- User Dashboard customizer */
+
+.#{$class-prefix}dragndrop_panel {
+    background: #fff;
+    margin-top: 5px;
+}
+
+.#{$class-prefix}dashboard_box {
+    background: #FFF;
+    padding: 5px 10px 10px 10px;
+    margin-top: 5px;
+}
+
+.#{$class-prefix}dnd_schem_item {
+    border: 1px solid #eff2f5;
+    cursor: move;
+    height: 30px;
+    margin: 2px 4px 2px 0;
+    padding: 0 5px;
+    position: relative;
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    span {
+        &.#{$class-prefix}label {
+            overflow: hidden;
+            padding: 0px 5px;
+            height: 20px;
+        }
+        &.action {
+            line-height: 15px;
+            overflow: hidden;
+            width: 70px;
+            position: absolute;
+            right: 4px;
+            top: 2px;
+            .#{$class-prefix}lbutton {
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+.#{$class-prefix}dnd_helper {
+    border: 1px dashed #000;
+}
+
+.#{$class-prefix}dnd_freezed .#{$class-prefix}dnd_schem_item {
+    background-color: #FFAAAA;
+}
+
+.#{$class-prefix}dragndrop_sections .#{$class-prefix}highbox {
+    margin-top: 6px;
+}
+
+.#{$class-prefix}dnd_placeholder {
+    height: 10px;
+    border: 1px dashed #999999;
+    background-color: #fff;
+}
+
+.#{$class-prefix}dnd_preloader {
+    height: 30px;
+}
+
+.#{$class-prefix}dnd_configurable_component {
+    h3 {
+        float: left;
+    }
+    .#{$class-prefix}box_icons {
+        float: right;
+        padding: var(--padd--md) var(--padd--md) 0;
+    }
+    .control {
+        display: inline-block;
+        width: 18px;
+        height: 16px;
+        text-decoration: none;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.#{$class-prefix}dnd_content_components {
+    padding: 10px 0;
+    width: 74%;
+}
+
+.#{$class-prefix}dnd_clonable_components {
+    border-left: 1px solid #eff2f5;
+    padding: 10px 0 10px 10px;
+    width: 24%;
+}
+
+
+/* Dnd Slider */
+
+.#{$class-prefix}dnd_slider {
+    height: 6px;
+    background-color: #fafafa;
+    position: relative;
+    margin: 10px 3px 0;
+    cursor: pointer;
+}
+
+.#{$class-prefix}dnd_slider_pusher {
+    float: left;
+    height: 1px;
+}
+
+.#{$class-prefix}dnd_slider_marker {
+    width: 10px;
+    height: 1px;
+    float: left;
+}
+
+.#{$class-prefix}dnd_slider_marker_point {
+    position: absolute;
+    width: 0px;
+    height: 6px;
+    border-left: 1px solid #999;
+    top: 0;
+}
+
+.#{$class-prefix}dnd_slider_handle {
+    position: absolute;
+    top: -5px;
+    width: 22px;
+    height: 16px;
+    cursor: move;
+    z-index: 50;
+    background: transparent url(#{$image-path}ic_img/ic_move_horizontal.svg) no-repeat center;
+}
+
+.#{$class-prefix}dnd_slider_helper {}
+
+.#{$class-prefix}dnd_slider_in_move {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+body {
+    &.base_index_page_customize {
+        .#{$class-prefix}page_container {
+            .#{$class-prefix}canvas {
+                @include ow_canvas();
+            }
+            .#{$class-prefix}page {
+                .#{$class-prefix}content {
+                    width: 100%;
+                }
+            }
+        }
+        #place_sections {
+            &>.clearfix {
+                display: flex !important;
+                margin-top: calc(var(--gutter-y) * -1);
+                margin-right: calc(var(--gutter-x) * -.5);
+                margin-left: calc(var(--gutter-x) * -.5);
+                .#{$class-prefix}dragndrop_content,
+                .#{$class-prefix}sidebar {
+                    @include create_gutter();
+                }
+                .#{$class-prefix}dragndrop_content {
+                    width: 80%;
+                    &>.clearfix {
+                        display: flex !important;
+                        margin-top: calc(var(--gutter-y) * -1);
+                        margin-right: calc(var(--gutter-x) * -.5);
+                        margin-left: calc(var(--gutter-x) * -.5);
+                        .place_section {
+                            @include create_gutter();
+                            flex-shrink: 0;
+                        }
+                    }
+                }
+                .#{$class-prefix}sidebar {
+                    width: 20%;
+                    padding-left: var(--gutter-x);
+                }
+            }
+        }
+    }
+    .#{$class-prefix}dragndrop_sections {
+        .top_section,
+        .left_section,
+        .right_section,
+        .bottom_section,
+        .sidebar_section {
+            background-position: center 7px;
+            background-repeat: no-repeat;
+        }
+        .top_section {
+            background-image: url(#{$image-path}dnd-label-top.png)
+        }
+        .left_section {
+            background-image: url(#{$image-path}dnd-label-column1.png)
+        }
+        .right_section {
+            background-image: url(#{$image-path}dnd-label-column2.png)
+        }
+        .bottom_section {
+            background-image: url(#{$image-path}dnd-label-bottom.png)
+        }
+        .sidebar_section {
+            background-image: url(#{$image-path}dnd-label-sidebar.png)
+        }
+        .#{$class-prefix}highbox {
+            margin-top: 6px;
+            padding: 0;
+            &.join_now_widget {
+                padding: 10px;
+            }
+            .#{$class-prefix}highbox {
+                &.join_now_widget {
+                    background-image: none;
+                    border: none;
+                }
+            }
+        }
+    }
+    .#{$class-prefix}dragndrop_panel {
+        .#{$class-prefix}dnd_schem_item {
+            width: 134px;
+        }
+    }
+    &:not(.base_index_page_customize) {
+        .index_customize_box {
+            position: fixed;
+            z-index: 102;
+            bottom: 0;
+            left: 0;
+            font-size: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            input {
+                &#goto_customize_btn {
+                    font-size: 0;
+                    height: 35px;
+                    width: 35px;
+                    background: url(#{$image-path}ic_img/ic_gear_wheel.svg) no-repeat center center;
+                }
+                &#goto_customize_btn,
+                &#goto_customize_btn:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.join_now_widget {
+    text-transform: uppercase;
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.#{$class-prefix}highbox_table {
+    .#{$class-prefix}highbox {
+        .#{$class-prefix}dnd_schem_item {
+            float: none;
+            margin-bottom: 4px;
+            margin-right: 0;
+            width: auto;
+        }
+    }
+}
+
+input[type=text].#{$class-prefix}settings_input {
+    width: 40px;
+}
+
+
+/* Slideshow widget */
+
+.#{$class-prefix}slider_settings_image_preview,
+.#{$class-prefix}slider_settings_image_desc {
+    width: 100%;
+}
+
+.#{$class-prefix}slider_settings_image_desc {
+    word-break: break-all;
+}

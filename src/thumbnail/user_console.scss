@@ -1,0 +1,74 @@
+/* ---- User Avatar Console styles ---- */
+body {
+    .#{$class-prefix}avatar_console {
+        position: relative;
+        background: #fff;
+        padding: 14px 4px 0px;
+        border: 1px solid #eff2f5;
+    
+        #avatar_console_image {
+            width: 262px;
+            height: 262px;
+            display: inline-block;
+            position: static;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #fff;
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+        }
+    
+        .#{$class-prefix}avatar_image {
+            height: 100%;
+            max-width: 170px;
+        }
+        
+        .#{$class-prefix}avatar_label {
+            bottom: 7px;
+            right: 7px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+    }
+}
+
+.#{$class-prefix}avatar_change {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+
+    .#{$class-prefix}lbutton {
+        margin-top: 95px;
+        padding: 10px;
+        border-radius: 20px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
+.#{$class-prefix}avatar_console_links {
+    background: #F0F0F0;
+    display: block;
+    padding: 5px 10px;
+    border-top: 1px solid #fff;
+}
+
+.user_online_wrap {
+    min-height: 21px;
+    text-align: left;
+}
+
+/* ---- End of User Avatar Console styles ---- */

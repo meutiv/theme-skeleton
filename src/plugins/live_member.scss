@@ -1,0 +1,37 @@
+/* ---- Live Member Icon ---- */
+
+.#{$class-prefix}miniic_live .#{$class-prefix}live_on {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(#{$image-path}miniic_live.png) center center no-repeat;
+    margin-right: 4px;
+}
+
+.#{$class-prefix}miniic_live .#{$class-prefix}lbutton {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0px;
+    line-height: 12px;
+    height: 12px;
+}
+
+.#{$class-prefix}miniic_live .#{$class-prefix}preloader_content {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: center center;
+}
+
+.#{$class-prefix}miniic_live .#{$class-prefix}preloader_content.#{$class-prefix}hidden {
+    display: none;
+}
+
+.#{$class-prefix}miniic_live .#{$class-prefix}lbutton.#{$class-prefix}green {
+    color: #5b646a;
+}
+
+
+/* ---- End Live Member Icon ---- */

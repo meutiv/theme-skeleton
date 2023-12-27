@@ -1,0 +1,27 @@
+.#{$class-prefix}table {
+    &_1,
+    &_2 {
+        tr {
+            td {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.#{$class-prefix}forum {
+    * {
+        box-sizing: border-box;
+    }
+    width: 100%;
+    overflow: hidden;
+    th,
+    td,
+    .#{$class-prefix}name,
+    .#{$class-prefix}topics,
+    .#{$class-prefix}replies,
+    .#{$class-prefix}author {
+        width: auto !important;
+        padding: 8px 0px;
+    }
+}

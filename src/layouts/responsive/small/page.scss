@@ -1,0 +1,21 @@
+/*Fonts*/
+
+html {
+    font-size: 14px;
+    body {
+        font-size: 1.15rem;
+        h1 {
+            font-size: 1.7rem;
+            line-height: 30px;
+        }
+        h3 {
+            font-size: 1.25rem;
+        }
+        .#{$class-prefix}supernarrow {
+            font-size: 1.1rem;
+        }
+        .#{$class-prefix}footer_menu {
+            font-size: 1.1rem;
+        }
+    }
+}

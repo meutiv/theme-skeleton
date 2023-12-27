@@ -1,0 +1,108 @@
+.#{$class-prefix}post_fake_input {
+    --radius: var(--border-radius--xl);
+    --shadow: var(--box-shadow--hard);
+    --line-height: var(--line-height);
+    --feed--gutter: var(--padd--md);
+    --text-color: var(--color--text);
+    --input-size: var(--avatar-normal);
+    background-color: var(--color--app);
+    @include browser-compatible(border-radius, var(--radius));
+    @include browser-compatible(box-shadow, var(--shadow));
+    border: solid 1px var(--divider--light);
+    margin-bottom: var(--padd--md);
+    padding: var(--padd--xl);
+    .#{$class-prefix}post_fake_input_text {
+        .#{$class-prefix}user_avatar {
+            .#{$class-prefix}avatar {
+                height: var(--input-size);
+                width: var(--input-size);
+                img {
+                    height: var(--input-size);
+                    width: var(--input-size);
+                }
+            }
+        }
+        input[type="text"] {
+            background-color: var(--site-bg-color);
+            color: var(--color--text);
+            height: var(--input-size);
+            border: none;
+            outline: none;
+            &:focus,
+            &:hover {
+                outline: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+    .#{$class-prefix}post_fake_btn_custom {
+        padding: var(--padd--sm) 0 0;
+    }
+}
+
+.btn_add_post {
+    color: var(--color--text);
+    display: inline-block;
+    text-align: center;
+    &::before {
+        @include icofont($menu-icon-size);
+        @include icon-name('app');
+        display: block;
+    }
+    &.btn_add_post_ {
+        &article {
+            &::before {
+                color: #C37D16;
+                content: "\efb2";
+            }
+        }
+        &video {
+            &::before {
+                content: "\ec92";
+                color: #5F9B41;
+            }
+        }
+        &image {
+            &::before {
+                content: "\efbc";
+                color: #5BA3EC;
+            }
+        }
+        &link {
+            &::before {
+                color: #7B358C;
+                content: "\ef71";
+            }
+        }
+        &event {
+            &::before {
+                content: "\ec45";
+                color: #E16745;
+            }
+        }
+    }
+}
+
+.#{$class-prefix}create_form_wrap {
+    .#{$class-prefix}create_input_text,
+    .#{$class-prefix}create_state,
+    .#{$class-prefix}create_actions,
+    .#{$class-prefix}create_user {}
+    .#{$class-prefix}create_user {
+        .#{$class-prefix}user_avatar {}
+        .#{$class-prefix}create_user_group {
+            select {}
+        }
+    }
+    .#{$class-prefix}create_input_text {
+        textarea {
+            display: block;
+            width: 100%;
+            border: 0;
+            min-height: 100px;
+        }
+    }
+    .#{$class-prefix}create_state {}
+    .#{$class-prefix}create_actions {}
+}

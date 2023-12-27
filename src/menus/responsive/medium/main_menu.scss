@@ -1,0 +1,7 @@
+.#{$class-prefix}menu_wrap {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: var(--header-bg-color);
+    z-index: var(--order--mobile-menu);
+}

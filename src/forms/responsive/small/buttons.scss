@@ -1,0 +1,21 @@
+/*Buttons*/
+
+a.#{$class-prefix}lbutton,
+span.#{$class-prefix}lbutton {
+    font-weight: normal;
+}
+
+.#{$class-prefix}attachments a {
+    height: 26px;
+    width: 26px;
+    background-position: -173px 2px;
+}
+
+.#{$class-prefix}attachment_btn span.#{$class-prefix}button input[type="submit"],
+.#{$class-prefix}attachment_btn span.#{$class-prefix}button input[type="button"] {
+    height: 26px;
+}
+
+ul.#{$class-prefix}bl a {
+    font-size: 1.1rem;
+}

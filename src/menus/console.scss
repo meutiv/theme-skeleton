@@ -1,0 +1,692 @@
+/* ---- Console styles ---- */
+
+.#{$class-prefix}console_wrap {
+    background-color: transparent;
+}
+
+.#{$class-prefix}console_body {
+    float: right;
+    @include browser-compatible('box-sizing', border-box);
+    padding: 0;
+}
+
+.#{$class-prefix}console_items_wrap {
+    display: flex;
+}
+
+.#{$class-prefix}console_item {
+    display: flex;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+    &.#{$class-prefix}console_dropdown_pressed {
+        a.#{$class-prefix}console_item_link {
+            color: var(--menu-active-color);
+        }
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+        &.#{$class-prefix}console_item_link {
+            display: block;
+            color: var(--menu-color);
+            font-size: $menu-text-size;
+            height: calc(var(--header-height) - 1px);
+            padding: var(--padd--sm) 1vw 0;
+            &:hover {
+                color: var(--menu-active-color);
+            }
+            &::before {
+                display: block !important;
+                font-size: $menu-icon-size !important;
+                text-align: center;
+            }
+        }
+    }
+    &:hover {
+        border-color: #d9e0e6;
+        cursor: pointer;
+    }
+    &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+    }
+    &:not(.#{$class-prefix}user_profile_console, .#{$class-prefix}webcilo_console_user_credit) {
+        a.#{$class-prefix}console_item_link {
+            &::before {
+                content: "\f007";
+            }
+        }
+    }
+    @include add-console-icon('.#{$class-prefix}invitation_list', 'message');
+    @include add-console-icon('.#{$class-prefix}friend_request_list', 'friends');
+    @include add-console-icon('.#{$class-prefix}mailbox_items_list', 'mail');
+    @include add-console-icon('.#{$class-prefix}mailbox_items_list.#{$class-prefix}console_dropdown_pressed', 'mail-open');
+    @include add-console-icon('.#{$class-prefix}notification_list', 'bell');
+    @include add-console-icon('.#{$class-prefix}notification_list.#{$class-prefix}console_dropdown_pressed', 'bell-open');
+    @include add-console-icon('.#{$class-prefix}admin_dashboard_console', 'admin');
+    @include add-console-icon('.#{$class-prefix}for_approval_list', 'approval');
+}
+
+.#{$class-prefix}console_block {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.#{$class-prefix}console_more {
+    display: none;
+}
+
+.#{$class-prefix}console_wrap {
+    .#{$class-prefix}console_item {
+        a.#{$class-prefix}console_item_link {
+            display: inline-block;
+        }
+        &:not(.#{$class-prefix}console_button) {
+            a.#{$class-prefix}console_item_link {
+                font-size: 0;
+                width: 20px;
+                height: 20px;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.#{$class-prefix}user_profile_console {
+    a.#{$class-prefix}console_item_link {
+        background: 0 0;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+.#{$class-prefix}console_profile_avatar {
+    align-items: center;
+    display: block !important;
+    font-size: $menu-text-size;
+    &>img {
+        display: block;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        height: 25px;
+        width: auto;
+        margin: 0 auto;
+    }
+    &>span {
+        display: block;
+        &::after {
+            @include icofont();
+            @include icon-name('down_arrow');
+        }
+    }
+}
+
+.#{$class-prefix}console_wrap {
+    .#{$class-prefix}user_profile_console {
+        a.#{$class-prefix}console_item_link {
+            width: 28px;
+            height: 28px;
+            img {
+                width: 100%;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+}
+
+.#{$class-prefix}console_button.#{$class-prefix}console_item {
+    a.#{$class-prefix}console_item_link {
+        pointer-events: auto;
+        width: auto;
+        height: auto;
+        color: #fff;
+        background: var(--color--primary);
+        padding: 8px 16px;
+        @include browser-compatible('border-radius', 4px);
+        @include browser-compatible('transition', ease all .5s);
+        border: solid 1px var(--color--primary);
+        text-decoration: none;
+        text-align: center;
+        &::before {
+            display: none;
+        }
+        &:hover {
+            color: #fff;
+            background: var(--color--primary);
+            border-color: transparent;
+            text-decoration: none;
+        }
+    }
+}
+
+
+/* Console Sign in */
+
+.#{$class-prefix}console_button.#{$class-prefix}console_item a.#{$class-prefix}console_item_link,
+.#{$class-prefix}signin_label {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.#{$class-prefix}signin_label {
+    display: inline-block;
+    margin: 4px 0;
+    vertical-align: top;
+    text-decoration: underline;
+    color: #4D4D4D;
+}
+
+.#{$class-prefix}signin_label:hover {
+    color: var(--color--primary);
+}
+
+.#{$class-prefix}signin_delimiter {
+    border-right: 1px solid #eff2f5;
+    padding: 0 4px 0 0;
+}
+
+.#{$class-prefix}menu_active .#{$class-prefix}signin_delimiter {
+    border-color: #5b646a;
+}
+
+.#{$class-prefix}console_item .#{$class-prefix}ico_signin {
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    margin: 6px 0 0 4px;
+    vertical-align: top;
+    width: 14px;
+}
+
+.#{$class-prefix}ico_signin:last-child {
+    margin-right: -4px;
+}
+
+
+/*Console select language styles*/
+
+.#{$class-prefix}console_lang {
+    padding: 4px;
+}
+
+.#{$class-prefix}console_lang_item {
+    margin-bottom: 1px;
+    margin-top: -2px;
+    text-transform: uppercase;
+    padding-top: 5px;
+    color: #5b646a;
+    font-size: 14px;
+}
+
+li.#{$class-prefix}console_lang_item {
+    padding: 3px 8px;
+}
+
+li.#{$class-prefix}console_lang_item:hover {
+    color: var(--color--primary);
+}
+
+.#{$class-prefix}console_lang_item span {
+    display: inline-block;
+    padding-left: 22px;
+    background-position: 0 2px;
+}
+
+div.#{$class-prefix}console_lang_item:hover>span {
+    color: var(--color--primary);
+}
+
+
+/* Console tooltip */
+
+.#{$class-prefix}console {
+    .#{$class-prefix}tooltip_top_right.#{$class-prefix}tooltip {
+        top: 42px !important;
+        padding-top: 2px;
+        right: 0px;
+    }
+    .#{$class-prefix}tooltip_top_right {
+        .#{$class-prefix}tooltip_tail {
+            span {
+                background-position: 1px -6px;
+            }
+        }
+    }
+    .#{$class-prefix}tooltip {
+        .#{$class-prefix}tooltip_body {
+            max-width: 340px;
+            padding: 0px;
+            min-width: 200px;
+        }
+    }
+}
+
+.#{$class-prefix}tooltip {
+    .#{$class-prefix}tooltip_body {
+        background: #fff;
+        padding: 4px 0;
+        border: 1px solid transparent;
+        @include browser-compatible('box-shadow', 0px 0px 8px 0px rgba(0, 0, 0, 0.04));
+    }
+}
+
+.console_tooltip {
+    z-index: var(--order--header);
+}
+
+
+/* Console counter */
+
+.#{$class-prefix}console {
+    span.#{$class-prefix}count_wrap {
+        position: absolute;
+        top: -2px;
+        right: 0px;
+    }
+    span.#{$class-prefix}count_bg {
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+    span.#{$class-prefix}count {
+        position: relative;
+        top: 0px;
+    }
+    .#{$class-prefix}tooltip_body {
+        span.#{$class-prefix}count_wrap {
+            position: static;
+            margin-top: 2px;
+        }
+    }
+}
+
+
+/* Console list*/
+
+.#{$class-prefix}console_list_wrapper {
+    width: 330px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 60px;
+    padding: 4px;
+}
+
+.#{$class-prefix}console_list {
+    cursor: default;
+    li {
+        padding: 3px;
+        height: auto;
+        overflow: hidden;
+        margin-left: -4px;
+        margin-right: -4px;
+        margin-bottom: 2px;
+        border-bottom: 1px solid var(--divider--light);
+        &:hover {
+            background-color: var(--color--app--lightgray);
+        }
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    li.#{$class-prefix}console_new_message {
+        background: #fff;
+        border-color: var(--color--primary);
+        &:hover {
+            background-color: var(--color--app--lightgray);
+        }
+    }
+}
+
+.#{$class-prefix}mailbox_items_list {
+    li.#{$class-prefix}mailbox_request_item {
+        padding: 8px 3px;
+    }
+    li.#{$class-prefix}chat_request_item {
+        padding: 8px 3px;
+    }
+}
+
+
+/* Console avatar */
+
+.#{$class-prefix}console {
+    .#{$class-prefix}avatar {
+        float: left;
+        margin-right: -40px;
+        height: 32px;
+        width: 32px;
+        padding: 4px;
+        background-image: none;
+        img {
+            height: 32px;
+            width: 32px;
+        }
+    }
+}
+
+
+/* Console View all btn */
+
+.#{$class-prefix}console_view_all_btn {
+    text-decoration: none;
+    display: block;
+    line-height: 38px;
+    text-align: center;
+    background: #fff;
+    text-transform: uppercase;
+    height: 40px;
+    &:hover {
+        color: #fff;
+        background: var(--color--primary);
+    }
+}
+
+.#{$class-prefix}console_view_all_btn_wrap {
+    .#{$class-prefix}console_view_all_btn {
+        color: #a2acb3;
+    }
+}
+
+
+/* Console dropdown menu */
+
+ul.#{$class-prefix}console_dropdown {
+    min-width: 110px;
+    text-align: left;
+    overflow-x: auto;
+    cursor: default;
+    padding: 4px;
+    font-size: 14px;
+    .#{$class-prefix}console_dropdown_cont {
+        white-space: nowrap;
+        margin-bottom: 1px;
+        a {
+            padding: 6px 10px;
+            border: none;
+            display: block;
+            font-size: 15px;
+            font-weight: 400;
+            color: #4d4d4d;
+        }
+    }
+    li {
+        &:last-child {
+            .#{$class-prefix}console_dropdown_cont {
+                margin-bottom: 0px;
+            }
+        }
+        .#{$class-prefix}console_divider {
+            height: 0px;
+            background: transparent;
+        }
+    }
+    li.#{$class-prefix}dropdown_menu_item {
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    img.#{$class-prefix}profile_avatar {
+        width: 24px;
+    }
+}
+
+
+/* Console content */
+
+.#{$class-prefix}console_ntf_cont {
+    display: block;
+    margin: 0px 57px 0px 44px;
+}
+
+.#{$class-prefix}console_invt_cont {
+    display: block;
+    margin: 0px 57px 0px 44px;
+    .#{$class-prefix}lbutton {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.#{$class-prefix}console_ntf_txt {
+    min-height: 19px;
+    padding: 0px 0px 3px 0px;
+    display: block;
+}
+
+.#{$class-prefix}console_invt_txt {
+    min-height: 19px;
+    padding: 0px 0px 3px 0px;
+    display: block;
+    width: 211px;
+    word-wrap: break-word;
+    font-size: 80%;
+}
+
+.#{$class-prefix}console_invt_img {
+    float: right;
+    margin-left: -54px;
+    width: 54px;
+    height: 54px;
+    text-align: right;
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+.#{$class-prefix}console_invt_no_img {
+    .#{$class-prefix}console_invt_txt {
+        width: 100%;
+    }
+    margin-right: 0px;
+}
+
+
+/* Console divider */
+
+.#{$class-prefix}console_divider {
+    line-height: 1px;
+    height: 1px;
+    background: #d9e0e6;
+    margin: 3px 0px 2px;
+}
+
+
+/* Console messages notifications */
+
+.#{$class-prefix}console_mailbox_txt {
+    font-size: 60%;
+}
+
+.#{$class-prefix}console_mailbox_title {
+    padding-right: 52px;
+    .#{$class-prefix}mailbox_convers_info_date {
+        font-size: 50%;
+        margin-right: -49px;
+    }
+}
+
+.#{$class-prefix}chat_request_item {
+    .console_list_ipc_item {
+        padding-left: 20px;
+        background: url(#{$image-path}miniic_buble.svg) 2px 12px no-repeat;
+    }
+    .#{$class-prefix}console_mailbox_txt {
+        font-size: 80%;
+        font-weight: normal;
+        line-height: 13px;
+    }
+}
+
+.#{$class-prefix}chat_request_item.#{$class-prefix}console_new_message {
+    .console_list_ipc_item {
+        background-image: url(#{$image-path}miniic_buble_active.svg);
+    }
+}
+
+.#{$class-prefix}mailbox_request_item {
+    .console_list_ipc_item {
+        padding-left: 20px;
+        background: url(#{$image-path}miniic_envelope.svg) 2px 12px no-repeat;
+    }
+}
+
+.#{$class-prefix}mailbox_request_item.#{$class-prefix}console_new_message {
+    .console_list_ipc_item {
+        background-image: url(#{$image-path}miniic_envelope_active.svg);
+    }
+}
+
+.#{$class-prefix}console_messages_viewall {
+    width: 50%;
+    float: left;
+    @include browser-compatible('box-sizing', 'border-box');
+}
+
+.#{$class-prefix}console_messages_send {
+    width: 50%;
+    float: left;
+    @include browser-compatible('box-sizing', 'border-box');
+}
+
+.#{$class-prefix}console_messages_btn {
+    .#{$class-prefix}console_messages_send {
+        display: none;
+    }
+    .#{$class-prefix}console_messages_viewall {
+        width: 100%;
+        padding-right: 0;
+        a {
+            display: inline-block;
+            width: 100%;
+            line-height: 38px;
+            text-align: center;
+            @include browser-compatible('box-sizing', 'border-box');
+            background: #fff;
+            color: #a2acb3;
+            text-transform: uppercase;
+            border-right: none;
+            &:hover {
+                color: #fff;
+                background: var(--color--primary);
+            }
+        }
+    }
+}
+
+.#{$class-prefix}console_messages_btns {
+    .#{$class-prefix}console_messages_viewall {
+        a {
+            display: inline-block;
+            width: 100%;
+            line-height: 38px;
+            text-align: center;
+            @include browser-compatible('box-sizing', 'border-box');
+            background: #fff;
+            color: #a2acb3;
+            text-transform: uppercase;
+            border-right: none;
+            &:hover {
+                color: #fff;
+                background: var(--color--primary);
+            }
+        }
+    }
+    .#{$class-prefix}console_messages_send {
+        a {
+            display: inline-block;
+            width: 100%;
+            line-height: 38px;
+            text-align: center;
+            @include browser-compatible('box-sizing', 'border-box');
+            background: #fff;
+            color: #a2acb3;
+            text-transform: uppercase;
+            &:hover {
+                color: #fff;
+                background: var(--color--primary);
+            }
+        }
+    }
+}
+
+.#{$class-prefix}console_controller {
+    float: right;
+    font-size: 20px;
+    margin: 0 10px;
+    .#{$class-prefix}console_btn {
+        color: var(--c-gc-header-link-color);
+        display: inline-block;
+        margin: 0 10px;
+        cursor: pointer;
+        &.#{$class-prefix}nav_btn {
+            &::before {
+                content: "\efa2";
+            }
+        }
+        &.#{$class-prefix}console_console_btn {
+            &::before {
+                content: "\ecfd";
+            }
+        }
+        &::before {
+            padding: 10px 5px;
+            display: block;
+        }
+    }
+}
+
+.#{$class-prefix}console_menu_active {
+    .#{$class-prefix}console_console_close_btn {
+        cursor: pointer;
+        &::before {
+            padding: 10px 5px;
+            display: block;
+            content: "\eedd";
+        }
+    }
+}
+
+.#{$class-prefix}console_menu_active {
+    .#{$class-prefix}header_nav {
+        position: relative;
+        .#{$class-prefix}console_main_wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            height: 100%;
+            background: #fff;
+            align-items: center;
+            justify-content: center;
+            z-index: var(--order--header);
+            .#{$class-prefix}console_body {
+                float: unset;
+            }
+        }
+    }
+    .#{$class-prefix}console_btn {
+        &.#{$class-prefix}nav_btn {
+            &::before {
+                content: "\eedd";
+            }
+        }
+    }
+}
+
+
+/* ---- End of Console styles ---- */

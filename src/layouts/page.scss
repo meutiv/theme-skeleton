@@ -1,0 +1,120 @@
+/* ---- Page Layout, Content styles ---- */
+
+
+/*Opera Fix*/
+
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+}
+
+
+/*End of the Opera Fix*/
+
+html body div .#{$class-prefix}page h1 {
+    background: none;
+}
+
+html body div .#{$class-prefix}page h1::before {
+    content: "";
+}
+
+body {
+    .#{$class-prefix}page_wrap {
+        min-height: 100%;
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
+.#{$class-prefix}bg_color {
+    background-color: var(--site-bg-color);
+}
+
+.#{$class-prefix}page_profile_wrap {
+    .#{$class-prefix}page_padding {
+        padding-top: 0 !important;
+    }
+}
+
+.#{$class-prefix}canvas {
+    margin: 0 auto;
+    word-wrap: break-word;
+    @include ow_canvas();
+    @include browser-compatible('box-sizing', border-box);
+    max-width: var(--container);
+}
+
+.#{$class-prefix}page {
+    margin: 0px auto;
+}
+
+.#{$class-prefix}page_container {
+    margin: 0px auto 16px;
+    .#{$class-prefix}page {
+        min-height: 400px;
+    }
+}
+
+.#{$class-prefix}page_wrap {
+    &.#{$class-prefix}page_sidebar_wrap {
+        .#{$class-prefix}canvas {
+            padding: 0;
+        }
+        .#{$class-prefix}page {
+            display: flex;
+            @include browser-compatible('box-sizing', 'border-box');
+            .#{$class-prefix}sidebar_cont {
+                position: relative;
+                width: var(--sidebar--width);
+                .#{$class-prefix}sidebar {
+                    position: fixed;
+                    top: 0;
+                    height: 100%;
+                    width: var(--sidebar--width);
+                    padding: var(--header-height) 0 0;
+                    @include browser-compatible('box-sizing', border-box);
+                    .#{$class-prefix}sidebar_content {
+                        height: 100%;
+                        @include browser-compatible('box-sizing', border-box);
+                        .#{$class-prefix}scrollable_sidebar {
+                            height: 100%;
+                            width: 100%;
+                            &::after {
+                                display: block;
+                                height: 100px;
+                                background-color: transparent;
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+            .#{$class-prefix}content {
+                @include ow_canvas();
+                width: calc(100% - var(--sidebar--width));
+                @include browser-compatible('box-sizing', border-box);
+                // margin-left: $sidebar-width; 
+            }
+        }
+    }
+}
+
+
+/* Image Gallery scroll */
+
+.#{$class-prefix}page_padding {
+    padding-top: calc( var(--header-height) + var(--padd--md));
+    >.#{$class-prefix}content_menu_wrap~div {
+        overflow-y: visible !important;
+        >table {
+            width: 95% !important;
+        }
+    }
+}
+
+
+/* ---- End of the Page Layout, Content styles ---- */

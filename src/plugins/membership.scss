@@ -1,0 +1,26 @@
+/* ---- Membership Subscribe styles ---- */
+
+.#{$class-prefix}mship_widget_block {
+    line-height: inherit;
+    .#{$class-prefix}mship_widget_current,
+    .#{$class-prefix}mship_widget_txt {
+        font-size: 90%;
+    }
+}
+
+.#{$class-prefix}subscribe_table .#{$class-prefix}highbox {
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+
+body .#{$class-prefix}table_1 tr td.#{$class-prefix}plans_td_empty+td {
+    border-top-left-radius: 4px;
+}
+
+body .#{$class-prefix}table_1 tr td.#{$class-prefix}gateways_td_empty+td {
+    border-bottom-left-radius: 4px;
+}
+
+
+/* ---- End of the Membership Subscribe styles ---- */

@@ -1,0 +1,10 @@
+/*------------- Messages --------------*/
+
+
+/* Hide Chat Dialog */
+
+// .#{$class-prefix}chat_cont,
+// .#{$class-prefix}chat_dialog_wrap,
+.#{$class-prefix}mailbox_switch_to_chat {
+    display: none !important;
+}

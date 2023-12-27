@@ -1,0 +1,23 @@
+/* ---- Footer Menu styles ---- */
+
+.#{$class-prefix}footer_menu {
+    padding: 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.#{$class-prefix}footer_menu a {
+    display: inline-block;
+    padding: 0px 0.7vw;
+}
+
+.#{$class-prefix}footer_menu a:first-child {
+    padding-left: 0vw;
+}
+
+.#{$class-prefix}footer_menu a:hover {
+    text-decoration: none;
+}
+
+
+/* ---- End of Footer Menu styles ---- */

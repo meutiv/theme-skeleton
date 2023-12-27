@@ -1,0 +1,7 @@
+body {
+    .#{$class-prefix}card_cover {
+        .VerifiedMemberMiniTag:after {
+            display: none !important;
+        }
+    }
+}

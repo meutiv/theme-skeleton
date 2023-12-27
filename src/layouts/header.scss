@@ -1,0 +1,60 @@
+/* ---- Header styles ---- */
+
+.#{$class-prefix}header_wrap {
+    width: 100%;
+}
+
+.#{$class-prefix}header {
+    height: auto;
+}
+
+.#{$class-prefix}site_panel {
+    width: 100%;
+    height: var(--header-height);
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: var(--font-size);
+    background-color: var(--header-bg-color);
+    box-shadow: 0 1px 0 var(--divider);
+    position: fixed;
+    transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -webkit-transition: .8s ease-in-out;
+    z-index: var(--order--header);
+    @include browser-compatible('box-sizing', border-box);
+    .#{$class-prefix}top_menus {
+        justify-content: end;
+    }
+    .#{$class-prefix}canvas {
+        // padding-top: var(--padd--sm);
+        // padding-bottom: var(--padd--sm);
+    }
+    .#{$class-prefix}logo_wrap {
+        padding-top: var(--padd--sm);
+        height: var(--header-height);
+        @include browser-compatible('box-sizing', border-box);
+    }
+    .#{$class-prefix}logo {
+        background-repeat: no-repeat;
+        background-image: #{$mini-logo};
+        background-size: auto 70%;
+        background-position: center center;
+        width: 50px;
+        height: 40px;
+        display: inline-block;
+    }
+}
+
+.#{$class-prefix}sticky_panel {
+    .#{$class-prefix}site_panel {
+        @include browser-compatible('box-shadow', 0 6px 10px -4px rgba(0, 0, 0, .15));
+    }
+}
+
+a.#{$class-prefix}logo:hover {
+    text-decoration: none;
+}
+
+
+/* ---- End of the Header styles ---- */

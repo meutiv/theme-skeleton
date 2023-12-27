@@ -1,0 +1,28 @@
+.#{$class-prefix}supernarrow,
+.#{$class-prefix}narrow,
+.#{$class-prefix}wide,
+.#{$class-prefix}superwide,
+.#{$class-prefix}column {
+    width: 100% !important;
+}
+
+.place_section {
+    &.#{$class-prefix}column {
+        width: 100%;
+    }
+    &.#{$class-prefix}narrow {
+        width: 100%;
+    }
+    &.#{$class-prefix}wide {
+        width: 100%;
+    }
+    &.#{$class-prefix}superwide {
+        width: 100%;
+    }
+    &.#{$class-prefix}supernarrow {
+        width: 100%;
+    }
+    &[class*='ow_column_'] {
+        width: 100%;
+    }
+}

@@ -1,0 +1,218 @@
+/* FloatBox implementation */
+
+#floatbox_overlay {
+    position: fixed;
+    z-index: var(--order--top);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.floatbox_overlayMacFFBGHack {
+    background: url(#{$image-path}macFFBgHack.png) repeat;
+}
+
+.floatbox_overlayBG {
+    background-color: #000;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+}
+
+#floatbox_HideSelect {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: none;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.floatbox_canvas {
+    z-index: var(--order--floatbox);
+    .floatbox_container {
+        z-index: var(--order--floatbox);
+        .floatbox_header {
+            padding: 4px;
+            text-align: left;
+            .floatbox_cap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .floatbox_title {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    padding: 8px 12px 0px;
+                    width: 100%;
+                }
+                .#{$class-prefix}box_cap_icons {
+                    margin-top: 1px;
+                    a {
+                        &.close_btn {
+                            margin: 2px;
+                            background: url(#{$image-path}ow-ic-close.png) no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        .floatbox_body {
+            padding: 8px 16px;
+            text-align: left;
+        }
+        .floatbox_bottom {
+            padding: 0px 16px 16px;
+            text-align: center;
+        }
+    }
+    &:not(.#{$class-prefix}floatbox_full) {
+        .floatbox_container {
+            --radius: var(--border-radius--xl);
+            --shadow: var(--box-shadow--hard);
+            width: 300px;
+            @include browser-compatible(border-radius, var(--radius));
+            @include browser-compatible(box-shadow, var(--shadow));
+            overflow: hidden;
+            &>.#{$class-prefix}bg_color {
+                background: var(--color--app);
+                padding: var(--padd) var(--padd);
+            }
+        }
+    }
+    &.#{$class-prefix}floatbox_full {
+        font-family: "Source Sans Pro", HelveticaNeue, Helvetica, Arial, Sans;
+        .floatbox_container {
+            width: 100%;
+            height: 100%;
+        }
+        &:not(.#{$class-prefix}floatbox_notice) {
+            .#{$class-prefix}box_cap_icons a.close {
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: cover;
+                float: right;
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            .floatbox_title {
+                text-transform: capitalize;
+                font-size: 48px;
+                padding: 0;
+                float: unset;
+                text-align: center;
+                line-height: 2.1em;
+                font-weight: 100;
+            }
+        }
+        a.close-floatbox-btn {
+            font-size: 24px;
+            display: inline-block;
+            padding: 10px 16px;
+            font-weight: 400;
+        }
+        &:not(.#{$class-prefix}floatbox_alt) {
+            &:not(.#{$class-prefix}floatbox_notice) {
+                background: var(--color--primary);
+                color: #ddd;
+                .#{$class-prefix}bg_color {
+                    background: transparent;
+                }
+                a {
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &.#{$class-prefix}floatbox_notice {
+        .floatbox_header {
+            padding: 4px;
+            text-align: left;
+            background: var(--color--primary);
+            color: #fff;
+            border-radius: 12px 12px 0px 0px;
+        }
+        .floatbox_title {
+            text-transform: capitalize;
+            font-size: 16px;
+            padding: 10px;
+        }
+        .floatbox_body {
+            background: #fff;
+            border-radius: 0px 0px 12px 12px;
+            text-align: center;
+        }
+    }
+}
+
+body {
+    .floatbox_canvas {
+        .floatbox_container {
+            margin-top: 100px;
+        }
+    }
+}
+
+
+/* Floatbox preloader style */
+
+.#{$class-prefix}floatbox_preloader {
+    margin: 0px auto;
+    position: absolute;
+    z-index: var(--order--prloader);
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    -webkit-animation: spin 2.5s infinite linear;
+    animation: spin 2.5s infinite linear;
+    border: 3px solid transparent;
+    border-top-color: #da10b3;
+    border-radius: 50% !important;
+    background: url(#{$image-path}96x96.png) no-repeat scroll center center/40px 40px;
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        border-radius: 50%;
+    }
+    &::before {
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        -webkit-animation: spin 2s infinite linear;
+        animation: spin 2s infinite linear;
+        border: 3px solid transparent;
+        border-top-color: var(--color--secondary);
+    }
+    &::after {
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        -webkit-animation: spin 1s infinite linear;
+        animation: spin 1s infinite linear;
+        border: 3px solid transparent;
+        border-top-color: #ddd;
+    }
+}
+
+
+/* End Floatbox preloader style */
+
+
+/* End FloatBox implementation */

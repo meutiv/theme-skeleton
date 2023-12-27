@@ -1,0 +1,168 @@
+/* ---- Card  ---- */
+
+.#{$class-prefix}friend_request_list {
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .#{$class-prefix}item_md_set2 {
+        width: 48%;
+        padding-bottom: 20px;
+        background-color: var(--color--app);
+        border-radius: 15px;
+        border: 1px solid var(--divider);
+        li {
+            background-color: var(--color--app);
+            border-radius: 50px;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.#{$class-prefix}card {
+    --card--padd: var(--padd);
+    display: block;
+    overflow: hidden;
+    &.#{$class-prefix}user_card {
+        position: relative;
+    }
+    &.#{$class-prefix}gcard {
+        .#{$class-prefix}card_cont {
+            margin: 0;
+        }
+    }
+    .#{$class-prefix}card_cont {
+        .#{$class-prefix}card_cover {
+            height: 200px;
+            overflow: hidden;
+            width: 100%;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .#{$class-prefix}card_cover_img {
+                width: 100%;
+                min-height: 130px;
+                &:not(.#{$class-prefix}card_cover_default) {
+                    &:not(img) {
+                        width: 100%;
+                        height: 100%;
+                        border: dashed 2px #ddd;
+                        box-sizing: border-box;
+                        border-bottom: solid 1px #ddd;
+                        &::after {
+                            content: "\ec5f";
+                            display: block;
+                            text-align: center;
+                            font-size: 8rem;
+                            line-height: 11rem;
+                            color: var(--ps-color--primary);
+                        }
+                    }
+                }
+            }
+        }
+        .#{$class-prefix}card_header,
+        .#{$class-prefix}card_body {
+            .#{$class-prefix}photo_userlist_info {
+                padding: 0;
+                color: var(--color--text);
+            }
+            .#{$class-prefix}card_bl {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                padding: 0 20px;
+                .#{$class-prefix}red {
+                    color: #fff;
+                }
+                .#{$class-prefix}ic_mail {
+                    &::before {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .#{$class-prefix}card_info {
+            padding-top: 40px;
+            .#{$class-prefix}card_header {
+                a {
+                    color: #{$black};
+                    font-weight: 600;
+                    line-height: 20px;
+                    text-transform: capitalize;
+                    &.#{$class-prefix}card_avatar {
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border: solid 2px #fff;
+                            border-radius: 100%;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+        .#{$class-prefix}card_footer {
+            .#{$class-prefix}card_toolbar {
+                display: flex;
+                align-items: center;
+                border-top: solid 1px var(--divider);
+                li {
+                    flex-grow: 1;
+                    display: inline-block;
+                    border-right: solid 1px var(--divider);
+                    &>* {
+                        display: block;
+                        padding: .6rem .1rem;
+                        text-align: center;
+                        font-size: 60%;
+                        float: unset;
+                    }
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        .#{$class-prefix}gcard_privacy {
+            text-transform: capitalize;
+            display: inline-block;
+            padding: 3px 5px;
+            border: solid 1px #ddd;
+            font-size: 80%;
+        }
+    }
+    &.#{$class-prefix}user_card {
+        .#{$class-prefix}card_cover {
+            height: auto;
+            border-radius: 15px 15px 0 0;
+            .#{$class-prefix}card_cover_img {
+                &.has_cover {
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: auto;
+                }
+                .#{$class-prefix}card_avatar {
+                    padding: 15px 0;
+                    position: absolute;
+                    right: 0;
+                    top: 75px;
+                    left: 0;
+                    .#{$class-prefix}avatar {
+                        width: 60px;
+                        height: 60px;
+                        background-color: var(--color--app);
+                        @include browser-compatible(border-radius, 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ---- End of Card  ---- */

@@ -1,0 +1,13 @@
+/* ---- Regular listing ---- */
+
+@include make-widget-list('.#{$class-prefix}mship_widget_block', '.#{$class-prefix}mship_widget_benefits', 'li, .#{$class-prefix}mship_widget_more', false, false);
+.#{$class-prefix}regular {
+    margin-bottom: 12px;
+    li {
+        @include list-item(false);
+        font-size: 100%;
+    }
+}
+
+
+/* ---- End of the Regular listing ---- */

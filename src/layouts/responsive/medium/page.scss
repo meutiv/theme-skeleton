@@ -1,0 +1,57 @@
+:root {
+    --av-size: var(--avatar-medium);
+    --avatar-width: var(--avatar-medium);
+    --av-margin: calc( 12px + var(--av-size));
+    --av-n-margin: calc(-1 * var(--av-margin));
+    --padd--canvas: var(--padd--sm);
+    --gutter-x: 0;
+}
+
+.#{$class-prefix}page_container {
+    width: 100%;
+    .#{$class-prefix}page {
+        padding: 16px 0 var(--header-height);
+    }
+}
+
+.#{$class-prefix}site_panel_wrap {
+    width: 100%;
+}
+
+.#{$class-prefix}footer {
+    width: 100%;
+}
+
+.#{$class-prefix}page_padding {
+    padding-top: 0;
+}
+
+.#{$class-prefix}right {
+    float: unset;
+    float: none;
+}
+
+.#{$class-prefix}left {
+    float: unset;
+}
+
+.#{$class-prefix}content {
+    >.#{$class-prefix}right {
+        margin-bottom: 16px;
+    }
+    >.#{$class-prefix}btn_delimiter.#{$class-prefix}right {
+        float: none;
+        margin-bottom: 8px;
+        .#{$class-prefix}button {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+#photo-list-search {
+    float: right;
+}
+
+.#{$class-prefix}photo_upload_submit.#{$class-prefix}right {
+    float: right;
+}

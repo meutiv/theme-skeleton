@@ -1,0 +1,8 @@
+.#{$class-prefix}console_dropdown_hover:hover .#{$class-prefix}ConsoleItemContent,
+.#{$class-prefix}console_dropdown_hover:active .#{$class-prefix}ConsoleItemContent {
+    display: block !important;
+}
+
+.#{$class-prefix}console_item a.#{$class-prefix}console_item_link {
+    pointer-events: none;
+}
